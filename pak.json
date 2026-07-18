@@ -6,7 +6,9 @@
   "author": "boorch (Bruce Menace/Cometary Trails)",
   "repo_url": "https://github.com/boorch/euclidtrack-pak",
   "release_filename": "EUCLIDTRACK.pak.zip",
-  "platforms": ["tg5040"],
+  "platforms": [
+    "tg5040"
+  ],
   "features": [
     "Four tracks, each with its own synth voice, euclidean sequencer, and per-track FX chain",
     "Melody from rhythm: euclidean patterns plus LFO pitch modulation, always quantized to the global root and scale",
@@ -19,5 +21,11 @@
     "Realtime WAV recording (16-bit 48 kHz) with auto-normalization, safe against battery death mid-take",
     "Projects live on the SD card outside the pak and survive updates; template projects supported"
   ],
-  "screenshots": []
+  "screenshots": [
+    ".github/screenshots/01.png",
+    ".github/screenshots/02.png",
+    ".github/screenshots/03.png",
+    ".github/screenshots/04.png",
+    ".github/screenshots/05.png"
+  ]
 }
