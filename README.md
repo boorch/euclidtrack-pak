@@ -2,6 +2,8 @@
 
 EUCLIDTRACK is an experimental synth workstation with a singular focus: generating melodies through euclidean sequencing and pitch modulation through LFOs. Four tracks, each with its own synth voice, euclidean sequencer, and effect chain, all driven from the Brick's buttons. Sixty four scenes, four modulators per track, twelve performance macros, generous saturation with many drive algorithms, and a hybrid morphing delay/reverb with a resonator and a shimmer stage.
 
+![EUCLIDTRACK boot splash](https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/screenshots/01.png)
+
 ## A short history
 
 EUCLIDTRACK started life as DRONAGE-S4, a project sideloaded onto the Torso S-4 to run alongside its vanilla OS. That version never went public: running it required some distinctly user-unfriendly steps, like replacing the CM4 inside the S-4 with one that has more RAM, and hacking the audio configuration of the S-4 OS. So the project gained a new life on the TrimUI Brick, a platform anyone can actually own, as the instrument you are holding now.
@@ -114,6 +116,8 @@ PRF  󰠃                            󰥛⠈ 󰥛⠘ 󰥛⠙ 󰥛⠛
 SCN  󰿏
 ```
 
+![The view map](https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/screenshots/05.png)
+
 - Dpad steers. Up and down change row, left and right walk along a row, from a device through its pages to the modulators.
 - **Release Select** to open the highlighted cell. Releasing without moving does nothing, so peeking is always safe.
 - The white cell is where you came from. Modulator cells are colored: red, blue, green, yellow for modulators 1 to 4.
@@ -139,6 +143,8 @@ Copy and paste are smart: a device pastes onto the same device on another track,
 ## The devices
 
 ### 󰔶 EUCLID, the sequencer
+
+![The EUCLID view with its step grid](https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/screenshots/04.png)
 
 | Cell | Does |
 |---|---|
@@ -345,6 +351,8 @@ A scene is a full snapshot of everything. Sixty four slots.
 ## 󰥛 Modulation
 
 Four modulators per track, four for MIX, four for PERFORM. Each is an LFO with waveform, rate, phase, skew, smoothing and more. The four slots have fixed colors everywhere in the app: **1 red, 2 blue, 3 green, 4 yellow**.
+
+![A sample and hold modulator: route it to pitch and the rhythm becomes a melody](https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/screenshots/03.png)
 
 - **Tap R1**: the MODULATOR view for the active slot, with a live scope. The main encoder cell cycles waveforms. With the shape layer (hold L1), West 󰸵  opens the waveform category menu and South 󰸴  rerolls random shapes.
 - Waveforms: Sine, Tri, Saw up, Saw down, Square, sample and hold (random and seeded), Noise, plus follower shapes that react to another track's audio or gates, and step sequence shapes.
