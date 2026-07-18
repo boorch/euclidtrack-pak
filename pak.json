@@ -1,0 +1,23 @@
+{
+  "name": "EUCLIDTRACK",
+  "version": "v0.0.1",
+  "type": "TOOL",
+  "description": "An experimental synth workstation with a singular focus: generating melodies through euclidean sequencing and pitch modulation through LFOs. Four tracks, each with its own synth voice, euclidean sequencer, and effect chain. Sixty four scenes, four modulators per track, twelve performance macros, generous saturation with many drive algorithms, and a hybrid morphing delay/reverb with a resonator and a shimmer stage. Full manual at https://github.com/boorch/euclidtrack-pak/blob/main/README.md.",
+  "author": "boorch (Bruce Menace/Cometary Trails)",
+  "repo_url": "https://github.com/boorch/euclidtrack-pak",
+  "release_filename": "Euclidtrack.pak.zip",
+  "platforms": ["tg5040"],
+  "features": [
+    "Four tracks, each with its own synth voice, euclidean sequencer, and per-track FX chain",
+    "Melody from rhythm: euclidean patterns plus LFO pitch modulation, always quantized to the global root and scale",
+    "Sixty four scenes with chaining, quantized launches, and a TEMP scratchpad that reverts on release",
+    "Four modulators per track, plus four MIX and four PERFORM modulators; macros can modulate the modulators themselves",
+    "Twelve performance macros, each drivable across dozens of parameters on every track at once",
+    "Per-track FX: flanger/chorus, eight band filterbank, drive with many saturation algorithms, and a hybrid morphing delay/reverb with resonator and shimmer stages",
+    "Bidirectional ring sends between tracks: a bounded four-track feedback ecosystem, with a four-shoulder panic grip",
+    "View map navigation hub: every view, page, track and modulator one dpad move away, with copy/paste and per-cell resets",
+    "Realtime WAV recording (16-bit 48 kHz) with auto-normalization, safe against battery death mid-take",
+    "Projects live on the SD card outside the pak and survive updates; template projects supported"
+  ],
+  "screenshots": []
+}
