@@ -182,7 +182,7 @@ Page 2:
 | LPG Decay | the plucked envelope's decay per hit |
 | LPG Color | the pluck's character, from soft and dark to snappy and bright |
 | Velocity | in euclidean mode: how hard each hit strikes, sampled once per trigger, so a modulator here makes accent patterns. In Drone mode: a continuous level control, so a modulator here makes smooth swells |
-| Out | which of the model's two outputs feed the chain: their mix, either one alone, or a true stereo split |
+| Out | which of the model's two outputs feed the chain: their mix, either one alone, or a true stereo split (straight or swapped) |
 
 ### <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0F9E.svg" height="16" alt="DIMENSION"> DIMENSION
 
@@ -356,7 +356,7 @@ Four modulators per track, four for MIX, four for PERFORM. Each is an LFO with w
 ![A sample and hold modulator: route it to pitch and the rhythm becomes a melody](https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/screenshots/03.png)
 
 - **Tap R1**: the MODULATOR view for the active slot, with a live scope. The main encoder cell cycles waveforms. With the shape layer (hold L1), West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> opens the waveform category menu and South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> rerolls random shapes.
-- Waveforms: Sine, Tri, Saw up, Saw down, Square, sample and hold (random and seeded), Noise, plus follower shapes that react to another track's audio or gates, and step sequence shapes.
+- Waveforms: Sine, Tri, Saw up, Saw down, Square, sample and hold (random and seeded), plus follower shapes that react to another track's audio or gates, and step sequence shapes.
 - Rates are clock synced. The square wave rises at the start of its cycle, like a clock gate.
 - **Pick the active modulator** in the view map: highlight a <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF095B.svg" height="16" alt="MODULATOR"> cell and press South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> or just open the cell. Inside the MODULATOR view, hold R1 and press dpad left/right to browse the four slots directly; releasing R1 after browsing stays in the view, while a plain R1 tap still exits.
 - **Hold R1 to assign**: while held, focus any parameter cell with the dpad and dial its modulation amount with South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> plus dpad. West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> flips the cell between unipolar and bipolar. East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> clears the cell's assignment. Release R1 when done.
@@ -418,7 +418,7 @@ Press MENU and choose **START RECORDING**. The app records its final stereo outp
 
 | Row | Does |
 |---|---|
-| PITCH MOD RANGE | how far modulation can push pitch: about 1.5 octaves, or the full range |
+| PITCH MOD RANGE | how far modulation can push pitch: about 1.7 octaves, or the full range |
 | EUC PITCH S&H DELAY | a tiny wait before each hit samples its pitch, so modulation has settled first. Pure utility: mostly you won't need to touch the default value |
 | PREVIEW PARAM ON FIRST EDIT | when on, the first tweak of a cell only reveals its value instead of changing it |
 | THEME | DARK or LIGHT. LIGHT inverts the whole grayscale look; accent colors stay put |
