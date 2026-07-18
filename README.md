@@ -16,11 +16,11 @@ EUCLIDTRACK started life as DRONAGE-S4, a project sideloaded onto the Torso S-4 
 
 **On other firmware:**
 
-1. Download the latest `Euclidtrack.pak.zip` from the [releases page](https://github.com/boorch/euclidtrack-pak/releases).
-2. Unzip it and copy the `Euclidtrack.pak` folder to your SD card under `Tools/tg5040/`.
+1. Download the latest `EUCLIDTRACK.pak.zip` from the [releases page](https://github.com/boorch/euclidtrack-pak/releases).
+2. Unzip it and copy the `EUCLIDTRACK.pak` folder to your SD card under `Tools/tg5040/`.
 3. Reinsert the card and launch **EUCLIDTRACK** from the Tools menu.
 
-Your projects live in `/mnt/SDCARD/Euclidtrack/`, outside the app folder. They survive updates and reinstalls. Back up that folder to back up your music.
+Your projects live in `/mnt/SDCARD/EUCLIDTRACK/`, outside the app folder. They survive updates and reinstalls. Back up that folder to back up your music.
 
 ## Launching and quitting
 
@@ -393,13 +393,13 @@ Press **MENU**: SAVE, SAVE AS, LOAD, NEW, OPTIONS, QUIT.
 - **NEW** starts fresh after a confirm.
 - Tempo is saved with the project.
 
-**Template**: save a project, then copy it on the SD card to `/mnt/SDCARD/Euclidtrack/template/template.euclidtrack`. It becomes the startup state, the NEW project state, and the target of every reset. A template is never overwritten by SAVE.
+**Template**: save a project, then copy it on the SD card to `/mnt/SDCARD/EUCLIDTRACK/template/template.euclidtrack`. It becomes the startup state, the NEW project state, and the target of every reset. A template is never overwritten by SAVE.
 
 ## Recording
 
 Press MENU and choose **START RECORDING**. The app records its final stereo output, exactly what you hear, into a WAV file. Choosing it closes the menu right away and a toast confirms RECORDING STARTED, so you are back on your instrument with the tape already rolling. The menu entry flips to STOP RECORDING while recording, and the beat light next to the tempo becomes a dot with a red downbeat so you always know recording is live.
 
-- Files land in `/mnt/SDCARD/Euclidtrack/recordings/`, named after the current project plus a timestamp, like `MYTRACK_20260718_143059.wav`.
+- Files land in `/mnt/SDCARD/EUCLIDTRACK/recordings/`, named after the current project plus a timestamp, like `MYTRACK_20260718_143059.wav`.
 - Recordings are 16 bit, 48 kHz, and automatically normalized to a healthy level when you stop.
 - Stopping also closes the menu right away, and a toast shows RECORDING STOPPED with the file name. Long names scroll back and forth so you can read the whole thing; any button dismisses the toast early.
 - Stopping within 5 seconds cancels and deletes the file instead (the toast says RECORDING CANCELLED), so accidental taps leave no litter.
