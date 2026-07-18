@@ -85,7 +85,7 @@ Transport running, a gate open, and a pattern with hits (or a drone): now you ha
 | R3 | | + faces: track gates 1 to 4 · + dpad up/down: master volume · + dpad left/right: tempo down/up 1 BPM |
 | L3 | | + West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> tap: copy the current view · + West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> held about 1.5 s: copy the whole track · + North <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E38.svg" height="16" alt="north"> tap: paste into the current view |
 | Start | play / stop | + faces: track gates 1 to 4 |
-| MENU | project menu: SAVE, SAVE AS, LOAD, NEW, START RECORDING, OPTIONS, QUIT | |
+| MENU (or Select+Start) | project menu: SAVE, SAVE AS, LOAD, NEW, START RECORDING, OPTIONS, QUIT. Inside the menu, Select backs out one level | |
 | L1+L2+R1+R2 | **sends panic**: every ring send snaps to zero instantly | |
 
 Every layer announces itself on screen: hold L1, L2, L3, Start or R3 and the bottom row lists what the face buttons do right now (shapes, the CLEAR stack, COPY and PASTE, or each track's gate state). Release the layer and the row returns to the device tab bar.
@@ -394,11 +394,11 @@ The deck row shows these while L2 is down. Undo history covers parameter edits, 
 
 ## Projects
 
-Press **MENU**: SAVE, SAVE AS, LOAD, NEW, OPTIONS, QUIT.
+Press **MENU** (or **Select+Start**): SAVE, SAVE AS, LOAD, NEW, START RECORDING, OPTIONS, QUIT. **Select** backs out one level anywhere in the menu, including text entry.
 
 - **SAVE** overwrites after a confirm. A never saved project routes to SAVE AS.
-- **SAVE AS**: left/right move the cursor, up/down cycle the character, West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> confirms, East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> deletes a character, MENU cancels.
-- **LOAD**: dpad chooses, West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> loads. **Hold East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> about 1.5 s on a project to delete it**, with a confirm dialog. MENU backs out.
+- **SAVE AS**: left/right move the cursor, up/down cycle the character, West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> confirms, East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> deletes a character, Select or MENU cancels.
+- **LOAD**: dpad chooses, West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> loads. **Hold East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> about 1.5 s on a project to delete it**, with a confirm dialog. Select or MENU backs out.
 - **NEW** starts fresh after a confirm.
 - Tempo is saved with the project.
 
