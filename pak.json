@@ -2,7 +2,7 @@
   "name": "EUCLIDTRACK",
   "version": "v1.0.0",
   "type": "TOOL",
-  "description": "An experimental synth workstation with a singular focus: generating melodies through euclidean sequencing and pitch modulation through LFOs. Four tracks, each with its own synth voice, euclidean sequencer, and effect chain. Sixty four scenes, four modulators per track, twelve performance macros, generous saturation with many drive algorithms, and a hybrid morphing delay/reverb with a resonator and a shimmer stage. Full manual at https://github.com/boorch/euclidtrack-pak/blob/main/README.md.",
+  "description": "An experimental synth workstation with a singular focus: generating melodies through euclidean sequencing and pitch modulation through LFOs. Four tracks, each with its own synth voice, euclidean sequencer, and effect chain. Sixty four scenes, four modulators per track, twelve performance macros, generous saturation with many drive algorithms, and a hybrid morphing delay/reverb with a resonator and a shimmer stage. USER MANUAL: https://bit.ly/euclidtrack",
   "author": "boorch (Bruce Menace/Cometary Trails)",
   "repo_url": "https://github.com/boorch/euclidtrack-pak",
   "release_filename": "EUCLIDTRACK.pak.zip",
