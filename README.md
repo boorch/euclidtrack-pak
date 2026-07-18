@@ -68,6 +68,7 @@ Transport running, a gate open, and a pattern with hits (or a drone): now you ha
 
 | Button | Tap | Hold |
 |---|---|---|
+| Select | | **view map**, the navigation hub: jump anywhere, copy, paste, reset (see below) |
 | dpad | move focus, navigate lists | key repeat |
 | South 󰸴  (B) | confirm in dialogs | EDIT: hold and use dpad to tweak the focused param (left/right fine, up/down coarse) |
 | West 󰸵  (Y) | knob push, opens popups | |
@@ -80,7 +81,6 @@ Transport running, a gate open, and a pattern with hits (or a drone): now you ha
 | R2 | PERFORM view on/off | MACRO assign |
 | R3 | | + faces: track gates 1 to 4 · + dpad up/down: master volume · + dpad left/right: tempo down/up 1 BPM |
 | L3 | | + West 󰸵  tap: copy the current view · + West 󰸵  held about 1.5 s: copy the whole track · + North 󰸸  tap: paste into the current view |
-| Select | | view map (see below) |
 | Start | play / stop | + faces: track gates 1 to 4 |
 | MENU | project menu: SAVE, SAVE AS, LOAD, NEW, START RECORDING, OPTIONS, QUIT | |
 | L1+L2+R1+R2 | **sends panic**: every ring send snaps to zero instantly | |
