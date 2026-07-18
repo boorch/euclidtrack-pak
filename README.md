@@ -34,9 +34,10 @@ Your projects live in `/mnt/SDCARD/EUCLIDTRACK/`, outside the app folder. They s
 
 A fresh boot is silent on purpose. Three things have to happen:
 
-1. **Start the transport.** Tap and release START (a quick tap, not a hold). The tempo light starts flashing. Tap again to stop.
-2. **Open at least one track's gate.** Hold START (or R3) and press a face button: West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> is track 1, North <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E38.svg" height="16" alt="north"> is track 2, East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> is track 3, South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> is track 4. While you hold, the bottom row shows each track's gate state: ▶ means open, ■ means closed. A track with a closed gate makes no sound, no matter what else is set.
-3. **Give the sequencer something to play.** On the EUCLID view, either raise **Triggers** so the pattern has hits in it, or set **Steps** all the way down to **Drone** for a continuous, infinite tone.
+1. Most important thing: **Hold SELECT to bring up minimap**, use dpad to focus on a cell, release SELECT to jump on that view.
+2. **Start the transport.** Tap and release START (a quick tap, not a hold). The tempo light starts flashing. Tap again to stop.
+3. **Open at least one track's gate.** Hold START (or R3) and press a face button: West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> is track 1, North <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E38.svg" height="16" alt="north"> is track 2, East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> is track 3, South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> is track 4. While you hold, the bottom row shows each track's gate state: ▶ means open, ■ means closed. A track with a closed gate makes no sound, no matter what else is set.
+4. **Give the sequencer something to play.** On the EUCLID view, either raise **Triggers** so the pattern has hits in it, or set **Steps** all the way down to **Drone** for a continuous, infinite tone.
 
 Transport running, a gate open, and a pattern with hits (or a drone): now you have sound.
 
