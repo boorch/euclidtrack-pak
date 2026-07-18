@@ -73,6 +73,8 @@ Transport running, a gate open, and a pattern with hits (or a drone): now you ha
 |---|---|---|
 | Select | | **view map**, the navigation hub: jump anywhere, copy, paste, reset (see below) |
 | dpad | move focus, navigate lists | key repeat |
+| left stick (Brick Pro) | mirrors the dpad, layer combos included | |
+| right stick (Brick Pro) | dials the focused param with no hold: left/right fine, up/down coarse | |
 | South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> (B) | confirm in dialogs | EDIT: hold and use dpad to tweak the focused param (left/right fine, up/down coarse) |
 | West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> (Y) | knob push, opens popups | |
 | North <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E38.svg" height="16" alt="north"> (X) | TEMP scratchpad on/off | in PERFORM: macro picker |
@@ -95,7 +97,7 @@ Every layer announces itself on screen: hold L1, L2, L3, Start or R3 and the bot
 ## The core loop
 
 1. Use the **dpad** to focus one of the eight parameter cells.
-2. **Hold South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> and press the dpad** to change the value. Left and right are fine steps, up and down are coarse.
+2. **Hold South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> and press the dpad** to change the value. Left and right are fine steps, up and down are coarse. On a Brick Pro, the right stick does the same with no hold.
 3. **West** <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> pushes the knob. Cells with lists (engine type, waveform, scale) open a popup: dpad to choose, West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> or South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> to confirm, East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> to cancel.
 4. **East** <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> resets the focused parameter to its default.
 
