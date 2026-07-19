@@ -190,13 +190,15 @@ Page 2:
 
 A flanger and a chorus in series. Each has its own Wet, so you can run either alone or both.
 
+Fl Mode and Ch Mode are bipolar flavor knobs. The center is the subtlest setting, each side leans into a named character, and everything between is a smooth blend, so a modulator can sweep the flavor without a jump.
+
 | Cell | Does |
 |---|---|
-| Fl Mode | the flanger's flavor |
+| Fl Mode | flanger flavor. Negative is a hollow notching comb, positive a resonant jet, center a gentle modulated delay |
 | Fl Rate | flanger sweep speed |
 | Fl Depth | flanger sweep depth |
 | Fl Wet | flanger dry/wet |
-| Ch Mode | the chorus's flavor |
+| Ch Mode | chorus flavor. Negative is a warm Juno thickening, positive a wide, spacious spread, center between the two |
 | Ch Rate | chorus movement speed |
 | Ch Depth | chorus movement depth |
 | Ch Wet | chorus dry/wet |
@@ -226,7 +228,7 @@ Eight fixed bands, one cell per band, cut and boost around the middle. All eight
 | Comp | the per track compressor, sitting at the very end of the track's chain |
 | Base | low corner of the drive's tone filter |
 | Width | how many octaves above Base stay open |
-| Dirt | tape hiss and vinyl crackle, added after the reverb so it stays a dry surface layer |
+| Dirt | bipolar. Negative fades in tape hiss, positive vinyl crackle, silent at center. Added after the reverb so it stays a dry surface layer |
 | Wet | dry/wet of the drive section |
 
 ### <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0AC4.svg" height="16" alt="DRIFT"> DRIFT, the hybrid morphing delay/reverb
