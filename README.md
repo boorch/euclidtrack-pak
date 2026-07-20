@@ -4,6 +4,10 @@ EUCLIDTRACK is an experimental synth workstation with a singular focus: generati
 
 ![EUCLIDTRACK boot splash](https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/screenshots/01.png)
 
+### First thing to know: press MENU for the menu, then open HELP
+
+**EUCLIDTRACK has a full manual built in.** Press **MENU** (or **Select+Start**) at any time to open the main menu, then choose **HELP**: page-by-page reference on every control, view, and gesture. Whenever you are unsure how something works, that is the fastest place to look.
+
 ## A short history
 
 EUCLIDTRACK started life as DRONAGE-S4, a project sideloaded onto the Torso S-4 to run alongside its vanilla OS. That version never went public: running it required some distinctly user-unfriendly steps, like replacing the CM4 inside the S-4 with one that has more RAM, and hacking the audio configuration of the S-4 OS. So the project gained a new life on the TrimUI Brick, a platform anyone can actually own, as the instrument you are holding now.
@@ -61,6 +65,7 @@ Transport running, a gate open, and a pattern with hits (or a drone): now you ha
 | <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0EA2.svg" height="16" alt="MIX"> | MIX, the mixer |
 | <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0803.svg" height="16" alt="PERFORM"> | PERFORM, macros |
 | <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0FCF.svg" height="16" alt="SCENES"> | SCENES |
+| <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF16DF.svg" height="16" alt="LOOPER"> | LOOPER, the master loop recorder |
 | <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF095B.svg" height="16" alt="MODULATOR"> | MODULATOR (colored by slot) |
 
 ---
@@ -87,7 +92,7 @@ Transport running, a gate open, and a pattern with hits (or a drone): now you ha
 | R3 | | + faces: track gates 1 to 4 · + dpad up/down: master volume · + dpad left/right: tempo down/up 1 BPM |
 | L3 | | + West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> tap: copy the current view · + West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> held about 1.5 s: copy the whole track · + North <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E38.svg" height="16" alt="north"> tap: paste into the current view |
 | Start | play / stop | + faces: track gates 1 to 4 |
-| MENU (or Select+Start) | project menu: SAVE, SAVE AS, LOAD, NEW, START RECORDING, OPTIONS, QUIT. Inside the menu, Select backs out one level | |
+| MENU (or Select+Start) | project menu: SAVE, SAVE AS, LOAD, NEW, START RECORDING, OPTIONS, HELP, QUIT. Inside the menu, Select backs out one level | |
 | L1+L2+R1+R2 | **sends panic**: every ring send snaps to zero instantly | |
 
 Every layer announces itself on screen: hold L1, L2, L3, Start or R3 and the bottom row lists what the face buttons do right now (shapes, the CLEAR stack, COPY and PASTE, or each track's gate state). Release the layer and the row returns to the device tab bar.
@@ -116,7 +121,7 @@ T3   ...
 T4   ...
 MIX  󰺢⠈ 󰺢⠘ 󰺢⠙                     󰥛⠈ 󰥛⠘ 󰥛⠙ 󰥛⠛
 PRF  󰠃                            󰥛⠈ 󰥛⠘ 󰥛⠙ 󰥛⠛
-SCN  󰿏
+SCN  󰿏  󱛟
 ```
 
 ![The view map](https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/screenshots/05.png)
@@ -159,6 +164,11 @@ Copy and paste are smart: a device pastes onto the same device on another track,
 | Pad | appends silent steps after the pattern: the loop becomes Steps plus Pad long, with the padding always resting. Great for odd loop lengths and breathing room |
 | Reset Beat | restarts the pattern every N beats |
 | Shuffle | swing |
+
+Two of these cells hide a popup on the knob push (West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> ; dpad chooses, West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> or South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> commits, East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> cancels):
+
+- **Triggers** picks the trigger mode. **TRIGGER** fires a short pulse per hit, percussive. **GATE** holds the gate open for the whole step, and back-to-back hits re-strike so each carries its own pitch. **TIE** keeps the gate high across consecutive hits: one held legato note whose pitch holds until the next rest.
+- **Rate** picks the timing feel. **STRAIGHT** is the plain division; **TRIPLET** and **DOTTED** stretch each step (progressively longer) for a swung or dotted groove.
 
 ### <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF067D.svg" height="16" alt="ENGINE"> ENGINE, the voice
 
@@ -340,6 +350,49 @@ The master bus ends in a lookahead limiter. It is always on and not a knob; four
 
 ---
 
+## <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF16DF.svg" height="16" alt="LOOPER"> LOOPER
+
+A single loop that records the **whole master bus**, always locked to the clock. Capture the live mix, crossfade over to the loop, load a different project, and fade back in, all in time. It is built for live sets and for DJ-style transitions between projects.
+
+![The LOOPER view](https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/screenshots/06.png)
+
+Open it from the view map: it sits on the last row, next to <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0FCF.svg" height="16" alt="SCENES"> SCENES.
+
+### Recording
+
+With the shape layer (hold L1), **West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> is RECORD** and the other faces are inert. What RECORD does reads the loop's current state:
+
+| State | RECORD does |
+|---|---|
+| empty | arms a capture. It punches in on the next QUANTIZE boundary and records LOOP LEN beats |
+| playing | overdubs one pass onto the loop |
+| recording | punches out early on the next boundary |
+| armed | cancels the arm |
+
+Once captured, the loop always plays. It restarts from the top every time the transport starts, and it keeps sounding through a stop, so you can fade a loop out by hand while everything else is silent.
+
+### The knobs
+
+| Cell | Does |
+|---|---|
+| K1 XFADE | equal-power crossfade from the live mix into the loop. Never saved |
+| K2 LOOP LEN | loop length in beats: 4, 8, 16, 32, 64 or 128 |
+| K3 QUANTIZE | the punch in and out grid: 1, 2, 4 or 8 beats |
+| K4 OVERDUB FB | overdub feedback: 0 replaces the old layer, 100 percent stacks layers forever |
+| K5 TONE | the same bipolar DJ filter as the mixer's Tone, on the loop only. Negative is low-pass, positive is high-pass, center is flat. Never saved |
+
+The canvas draws the loop as a waveform: red while recording, dim white while playing, with a bright playhead riding across it.
+
+### Clearing
+
+The CLEAR layer (hold L2) here becomes UNDO, REDO, ERASE BUFFER and RESET PARAMS. RESET PARAMS (South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> ) returns the four knobs to their defaults but leaves the audio alone. ERASE BUFFER (East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> ) drops the captured loop, so it asks first: West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> confirms, South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> cancels.
+
+### What saves
+
+LOOP LEN, QUANTIZE and OVERDUB FB are saved with the project. XFADE, TONE and the recorded audio are never saved: the loop is live session state, and it survives loading another project, which is the whole point. To keep a captured loop in sync while you switch projects live, turn on **KEEP BPM ON LOAD** in OPTIONS (see below).
+
+---
+
 ## <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0FCF.svg" height="16" alt="SCENES"> Scenes and TEMP
 
 A scene is a full snapshot of everything. Sixty four slots.
@@ -390,7 +443,7 @@ Hold **L2** and the face buttons become:
 | East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> | RESET MOD: clear the current view's modulation assignments |
 | South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> | RESET PARAMS: reset the current view's parameters |
 
-The deck row shows these while L2 is down. Undo history covers parameter edits, resets, randomize, paste and scene operations.
+The deck row shows these while L2 is down. Undo history covers parameter edits, resets, randomize, paste and scene operations. In the LOOPER view the East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> face is ERASE BUFFER instead of RESET MOD, since the looper has no modulation to clear.
 
 **L2 plus R2 together randomizes the current device.** It is curated per device: on EUCLID it rolls the pattern but never Probability, Reset Beat or Drone, and never lands on silence.
 
@@ -426,8 +479,9 @@ Press MENU and choose **START RECORDING**. The app records its final stereo outp
 | EUC PITCH S&H DELAY | a tiny wait before each hit samples its pitch, so modulation has settled first. Pure utility: mostly you won't need to touch the default value |
 | PREVIEW PARAM ON FIRST EDIT | when on, the first tweak of a cell only reveals its value instead of changing it |
 | THEME | DARK or LIGHT. LIGHT inverts the whole grayscale look; accent colors stay put |
+| KEEP BPM ON LOAD | when on, loading a project ignores its saved tempo and keeps the current one. Handy with the LOOPER, so a captured loop stays in sync as you switch projects during a set |
 
-Options are saved with the project, so a template project (see the Projects section) carries its option values into every new project too.
+The first four options are saved with the project, so a template project (see the Projects section) carries its option values into every new project too. KEEP BPM ON LOAD is the exception: it is session only, always off at boot and never written to disk, so you flip it on by hand each time you want it for a live set.
 
 ---
 

@@ -1,6 +1,6 @@
 {
   "name": "EUCLIDTRACK",
-  "version": "v1.1.2",
+  "version": "v1.2.0",
   "type": "TOOL",
   "description": "An experimental synth workstation with a singular focus: generating melodies through euclidean sequencing and pitch modulation using LFOs. Four tracks, each with its own synth voice, euclidean sequencer, and effect chain. Sixty four scenes, four modulators per track, twelve performance macros, generous saturation with many drive algorithms, and a hybrid morphing delay/reverb with a resonator and a shimmer stage. USER MANUAL: https://bit.ly/euclidtrack",
   "author": "boorch (Bruce Menace/Cometary Trails)",
@@ -18,6 +18,7 @@
     "Per-track FX: flanger/chorus, eight band filterbank, drive with many saturation algorithms, and a hybrid morphing delay/reverb with resonator and shimmer stages",
     "Bidirectional ring sends between tracks: a bounded four-track feedback ecosystem, with a four-shoulder panic grip",
     "View map navigation hub: every view, page, track and modulator one dpad move away, with copy/paste and per-cell resets",
+    "Master-bus live looper: clock-locked capture with overdub, a bipolar tone filter, and an equal-power crossfade for DJ-style transitions between projects",
     "Realtime WAV recording (16-bit 48 kHz) with auto-normalization, safe against battery death mid-take",
     "Projects live on the SD card outside the pak and survive updates; template projects supported"
   ],
@@ -26,6 +27,7 @@
     ".github/screenshots/02.png",
     ".github/screenshots/03.png",
     ".github/screenshots/04.png",
-    ".github/screenshots/05.png"
+    ".github/screenshots/05.png",
+    ".github/screenshots/06.png"
   ]
 }
