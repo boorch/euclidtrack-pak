@@ -389,7 +389,7 @@ The CLEAR layer (hold L2) here becomes UNDO, REDO, ERASE BUFFER and RESET PARAMS
 
 ### What saves
 
-LOOP LEN, QUANTIZE and OVERDUB FBK are saved with the project. XFADE, TONE and the recorded audio are never saved: the loop is live session state, and it survives loading another project, which is the whole point. To keep a captured loop in sync while you switch projects live, turn on **KEEP BPM ON LOAD** in OPTIONS (see below).
+The looper saves nothing to the project. LOOP LEN, QUANTIZE, OVERDUB FBK, XFADE, TONE and the recorded audio are all live session state: they survive loading another project and starting a new one, so a loop you are performing never changes under you when you switch projects. That is the whole point. To hold it fully in sync across a switch, also turn on **KEEP BPM ON LOAD** in OPTIONS (see below), which keeps the tempo through both load and new. The only thing that resets the looper is a fresh boot or an explicit ERASE / RESET PARAMS.
 
 ---
 
@@ -479,7 +479,7 @@ Press MENU and choose **START RECORDING**. The app records its final stereo outp
 | EUC PITCH S&H DELAY | a tiny wait before each hit samples its pitch, so modulation has settled first. Pure utility: mostly you won't need to touch the default value |
 | PREVIEW PARAM ON FIRST EDIT | when on, the first tweak of a cell only reveals its value instead of changing it |
 | THEME | DARK or LIGHT. LIGHT inverts the whole grayscale look; accent colors stay put |
-| KEEP BPM ON LOAD | when on, loading a project ignores its saved tempo and keeps the current one. Handy with the LOOPER, so a captured loop stays in sync as you switch projects during a set |
+| KEEP BPM ON LOAD | when on, loading a project or starting a new one ignores the project tempo and keeps the current one. Handy with the LOOPER, so a captured loop stays in sync as you switch or start projects during a set |
 | QUICK MODULATION ASSIGN | **on by default.** While you hold the assign shoulder (R1 for a modulator, R2 for a macro), the dpad sets the amount directly on the parameter you last focused; coarse and fine still apply, and the destination stays put. Turn it off if you would rather move the dpad across parameters to pick a destination first, then adjust with South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> plus dpad |
 | SWAP FACE KEYS | **off by default.** Swaps X with Y and A with B on a gamepad's face buttons. The Brick's built-in controls are fixed, so this has no effect here; it is a desktop-gamepad option that rides in the same list |
 
