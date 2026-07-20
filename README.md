@@ -81,7 +81,7 @@ Transport running, a gate open, and a pattern with hits (or a drone): now you ha
 | left stick (Brick Pro) | mirrors the dpad, layer combos included | |
 | right stick (Brick Pro) | dials the focused param with no hold: left/right fine, up/down coarse | |
 | South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> (B) | confirm in dialogs | EDIT: hold and use dpad to tweak the focused param (left/right fine, up/down coarse) |
-| West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> (Y) | knob push, opens popups | |
+| West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> (Y) | cell push, opens popups | |
 | North <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E38.svg" height="16" alt="north"> (X) | TEMP scratchpad on/off | in PERFORM: macro picker |
 | East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> (A) | cancel in dialogs, reset the focused param elsewhere, delete a character in text entry | in the LOAD browser: delete the project |
 | L1 | | SHAPES layer: the four face buttons become the on screen action buttons; the deck row shows what each does |
@@ -103,7 +103,7 @@ Every layer announces itself on screen: hold L1, L2, L3, Start or R3 and the bot
 
 1. Use the **dpad** to focus one of the eight parameter cells.
 2. **Hold South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> and press the dpad** to change the value. Left and right are fine steps, up and down are coarse. On a Brick Pro, the right stick does the same with no hold.
-3. **West** <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> pushes the knob. Cells with lists (engine type, waveform, scale) open a popup: dpad to choose, West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> or South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> to confirm, East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> to cancel.
+3. **West** <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> pushes into the focused cell. Cells with lists (engine type, waveform, scale) open a popup: dpad to choose, West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> or South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> to confirm, East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> to cancel.
 4. **East** <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> resets the focused parameter to its default.
 
 Pressing up from the top row of cells moves focus into the top bar: SCENE, ROOT, SCALE, TEMPO. The same South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> plus dpad gesture tweaks them. SCENE steps switch scenes instantly, with no quantize wait. Down returns to the parameter cells.
@@ -165,7 +165,7 @@ Copy and paste are smart: a device pastes onto the same device on another track,
 | Reset Beat | restarts the pattern every N beats |
 | Shuffle | swing |
 
-Two of these cells hide a popup on the knob push (West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> ; dpad chooses, West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> or South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> commits, East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> cancels):
+Two of these cells hide a popup on the cell push (West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> ; dpad chooses, West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> or South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> commits, East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> cancels):
 
 - **Triggers** picks the trigger mode. **TRIGGER** fires a short pulse per hit, percussive. **GATE** holds the gate open for the whole step, and back-to-back hits re-strike so each carries its own pitch. **TIE** keeps the gate high across consecutive hits: one held legato note whose pitch holds until the next rest.
 - **Rate** picks the timing feel. **STRAIGHT** is the plain division; **TRIPLET** and **DOTTED** stretch each step (progressively longer) for a swung or dotted groove.
@@ -176,7 +176,7 @@ Page 1:
 
 | Cell | Does |
 |---|---|
-| Engine | the synthesis model. Each model repurposes the three knobs below in its own way |
+| Engine | the synthesis model. Each model repurposes the three cells below in its own way |
 | Harmonics | the model's first macro control |
 | Timbre | the model's second macro control |
 | Morph | the model's third macro control |
@@ -200,7 +200,7 @@ Page 2:
 
 A flanger and a chorus in series. Each has its own Wet, so you can run either alone or both.
 
-Fl Mode and Ch Mode are bipolar flavor knobs. The center is the subtlest setting, each side leans into a named character, and everything between is a smooth blend, so a modulator can sweep the flavor without a jump.
+Fl Mode and Ch Mode are bipolar flavor cells. The center is the subtlest setting, each side leans into a named character, and everything between is a smooth blend, so a modulator can sweep the flavor without a jump.
 
 | Cell | Does |
 |---|---|
@@ -254,7 +254,7 @@ Page 1:
 | Feedback | tail length. The top of the range goes over unity and self sustains into a saturating wall, on purpose |
 | Morph | crossfades clean stereo delay into diffused reverb wash. Low Morph with high Feedback is a ping pong echo |
 | Shift | frequency shifter in the feedback path, in Hz, inharmonic by nature |
-| Motion | modulates the delay line lengths with a slow internal LFO, rate and depth rising together on one knob: subtle settings breathe and shimmer the tail, high settings bend it into detuned, seasick movement |
+| Motion | modulates the delay line lengths with a slow internal LFO, rate and depth rising together on one control: subtle settings breathe and shimmer the tail, high settings bend it into detuned, seasick movement |
 | Duck | the wet output ducks under the dry input and blooms back in the gaps |
 | Mix | dry/wet. At zero nothing of DRIFT is heard, including the resonator and the shimmer |
 
@@ -298,7 +298,7 @@ K5..K8  reverse:  SEND T2>T1   T3>T2   T4>T3   T1>T4
 ```
 
 The rows are aligned so every COLUMN is a mutual pair: the cell under
-T1>T2 is T2>T1, and so on. Raise both knobs in one column and you have
+T1>T2 is T2>T1, and so on. Raise both cells in one column and you have
 an instant two track feedback loop.
 
 The network, drawn out:
@@ -327,14 +327,14 @@ And where a send lands inside the receiving track:
                         └─► tap feeding this track's own sends
 ```
 
-Each knob feeds that track's finished sound (taken before its fader) into the start of the named track's chain, so the sent signal rides the whole destination chain: filter, color, drive, reverb, everything. Because both rings close the circle, sends can feed back into themselves through the other tracks. A high-pass and a soft-clip guard every injection, so the network saturates musically instead of running away.
+Each send feeds that track's finished sound (taken before its fader) into the start of the named track's chain, so the sent signal rides the whole destination chain: filter, color, drive, reverb, everything. Because both rings close the circle, sends can feed back into themselves through the other tracks. A high-pass and a soft-clip guard every injection, so the network saturates musically instead of running away.
 
 Things to know:
 
 - The tap is **pre-fader**: pulling a track's volume mutes its direct sound but keeps it feeding the network. That is a feature: a track can become a silent processor for its neighbors.
 - A **gated-off track silences whatever is sent through it**. The send rides the target's gate, so playing gates live also plays the network.
 - All eight sends are **modulation targets**.
-- Escape hatches: East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> on a focused send resets it, the CLEAR layer's RESET PARAMS in MIX view zeroes the whole page, and **gripping all four shoulders at once (L1+L2+R1+R2) snaps every send to zero from anywhere**. That grip is the big red button: when the network gets away from you, grab everything.
+- Escape hatches: East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> on a focused send resets it, and **gripping all four shoulders at once (L1+L2+R1+R2) snaps every send to zero from anywhere**. That grip is the big red button: when the network gets away from you, grab everything. (The CLEAR layer's RESET PARAMS resets the mixer's levels, pan and tone, not the sends.)
 
 **Recipes to start with:**
 
@@ -346,7 +346,7 @@ Things to know:
 
 **A warning about extreme feedback.** With several sends high and DRIFT Feedback past its self-sustain point, the network becomes a self oscillating instrument. The output is always limited and cannot clip or run away, but it can jump from quiet to VERY loud in an instant, and screaming resonances are part of the deal. Turn the master volume down before you go exploring, be gentle with headphones, and remember the fast exits: grab all four shoulders at once (every send snaps to zero), or stop the transport. What happens in the network is your responsibility. Have fun.
 
-The master bus ends in a lookahead limiter. It is always on and not a knob; four loud tracks cannot clip the output.
+The master bus ends in a lookahead limiter. It is always on, not a control you set; four loud tracks cannot clip the output.
 
 ---
 
@@ -371,25 +371,25 @@ With the shape layer (hold L1), **West <img src="https://raw.githubusercontent.c
 
 Once captured, the loop always plays. It restarts from the top every time the transport starts, and it keeps sounding through a stop, so you can fade a loop out by hand while everything else is silent.
 
-### The knobs
+### The cells
 
 | Cell | Does |
 |---|---|
 | K1 XFADE | equal-power crossfade from the live mix into the loop. Never saved |
 | K2 LOOP LEN | loop length in beats: 4, 8, 16, 32, 64 or 128 |
 | K3 QUANTIZE | the punch in and out grid: 1, 2, 4 or 8 beats |
-| K4 OVERDUB FB | overdub feedback: 0 replaces the old layer, 100 percent stacks layers forever |
+| K4 OVERDUB FBK | overdub feedback: 0 replaces the old layer, 100 percent stacks layers forever |
 | K5 TONE | the same bipolar DJ filter as the mixer's Tone, on the loop only. Negative is low-pass, positive is high-pass, center is flat. Never saved |
 
 The canvas draws the loop as a waveform: red while recording, dim white while playing, with a bright playhead riding across it.
 
 ### Clearing
 
-The CLEAR layer (hold L2) here becomes UNDO, REDO, ERASE BUFFER and RESET PARAMS. RESET PARAMS (South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> ) returns the four knobs to their defaults but leaves the audio alone. ERASE BUFFER (East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> ) drops the captured loop, so it asks first: West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> confirms, South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> cancels.
+The CLEAR layer (hold L2) here becomes UNDO, REDO, ERASE BUFFER and RESET PARAMS. RESET PARAMS (South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> ) returns the four cells to their defaults but leaves the audio alone. ERASE BUFFER (East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> ) drops the captured loop, so it asks first: West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> confirms, South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> cancels.
 
 ### What saves
 
-LOOP LEN, QUANTIZE and OVERDUB FB are saved with the project. XFADE, TONE and the recorded audio are never saved: the loop is live session state, and it survives loading another project, which is the whole point. To keep a captured loop in sync while you switch projects live, turn on **KEEP BPM ON LOAD** in OPTIONS (see below).
+LOOP LEN, QUANTIZE and OVERDUB FBK are saved with the project. XFADE, TONE and the recorded audio are never saved: the loop is live session state, and it survives loading another project, which is the whole point. To keep a captured loop in sync while you switch projects live, turn on **KEEP BPM ON LOAD** in OPTIONS (see below).
 
 ---
 
@@ -412,11 +412,11 @@ Four modulators per track, four for MIX, four for PERFORM. Each is an LFO with w
 
 ![A sample and hold modulator: route it to pitch and the rhythm becomes a melody](https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/screenshots/03.png)
 
-- **Tap R1**: the MODULATOR view for the active slot, with a live scope. The main encoder cell cycles waveforms. With the shape layer (hold L1), West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> opens the waveform category menu and South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> rerolls random shapes.
+- **Tap R1**: the MODULATOR view for the active slot, with a live scope. The main cell cycles waveforms. With the shape layer (hold L1), West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> opens the waveform category menu and South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> rerolls random shapes.
 - Waveforms: Sine, Tri, Saw up, Saw down, Square, sample and hold (random and seeded), plus follower shapes that react to another track's audio or gates, and step sequence shapes.
 - Rates are clock synced. The square wave rises at the start of its cycle, like a clock gate.
 - **Pick the active modulator** in the view map: highlight a <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF095B.svg" height="16" alt="MODULATOR"> cell and press South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> or just open the cell. Inside the MODULATOR view, hold R1 and press dpad left/right to browse the four slots directly; releasing R1 after browsing stays in the view, while a plain R1 tap still exits.
-- **Hold R1 to assign**: while held, focus any parameter cell with the dpad and dial its modulation amount with South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> plus dpad. West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> flips the cell between unipolar and bipolar. East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> clears the cell's assignment. Release R1 when done.
+- **Hold R1 to assign**: by default (**QUICK MODULATION ASSIGN** on), while you hold R1 the dpad sets the modulation amount directly on the focused cell (coarse and fine both), so you assign in one move. West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> flips the cell between unipolar and bipolar. East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> clears the cell's assignment. Release R1 when done. If you would rather change the destination while assigning, turn **QUICK MODULATION ASSIGN** off in OPTIONS: then, while you hold R1, the dpad picks a parameter freely, and South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> plus dpad assigns the amount to the chosen one.
 - The MODULATOR view is scope aware: opened from MIX it edits the MIX modulators, from PERFORM the PERFORM modulators.
 
 ## <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0803.svg" height="16" alt="PERFORM"> Macros
@@ -426,7 +426,7 @@ Twelve performance macros: M1 to M8 are sliders, M9 to M12 are momentary action 
 - **Tap R2**: the PERFORM view. Dpad focuses a slider, South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> plus dpad moves it. With the shape layer (hold L1), the faces fire M9 to M12, and they stay active only while held.
 - **Hold North <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E38.svg" height="16" alt="north"> in PERFORM** to open the macro picker: dpad chooses any of the twelve, release confirms. That macro becomes the active one.
 - **Hold R2 to assign** on any device view: focus a cell, dial the amount, West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> flips polarity, East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> clears. Release when done.
-- The same hold works inside a MODULATOR view: assign a macro to a track or MIX modulator's own knobs (Rate, Phase, and the rest), so one slider can, say, sweep a modulator's speed. The one exception is PERFORM's own modulators, since they drive the macros themselves; trying it there just shows a toast explaining why.
+- The same hold works inside a MODULATOR view: assign a macro to a track or MIX modulator's own cells (Rate, Phase, and the rest), so one slider can, say, sweep a modulator's speed. The one exception is PERFORM's own modulators, since they drive the macros themselves; trying it there just shows a toast explaining why.
 
 A macro can drive dozens of parameters at once across every track.
 
@@ -480,8 +480,10 @@ Press MENU and choose **START RECORDING**. The app records its final stereo outp
 | PREVIEW PARAM ON FIRST EDIT | when on, the first tweak of a cell only reveals its value instead of changing it |
 | THEME | DARK or LIGHT. LIGHT inverts the whole grayscale look; accent colors stay put |
 | KEEP BPM ON LOAD | when on, loading a project ignores its saved tempo and keeps the current one. Handy with the LOOPER, so a captured loop stays in sync as you switch projects during a set |
+| QUICK MODULATION ASSIGN | **on by default.** While you hold the assign shoulder (R1 for a modulator, R2 for a macro), the dpad sets the amount directly on the parameter you last focused; coarse and fine still apply, and the destination stays put. Turn it off if you would rather move the dpad across parameters to pick a destination first, then adjust with South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> plus dpad |
+| SWAP FACE KEYS | **off by default.** Swaps X with Y and A with B on a gamepad's face buttons. The Brick's built-in controls are fixed, so this has no effect here; it is a desktop-gamepad option that rides in the same list |
 
-The first four options are saved with the project, so a template project (see the Projects section) carries its option values into every new project too. KEEP BPM ON LOAD is the exception: it is session only, always off at boot and never written to disk, so you flip it on by hand each time you want it for a live set.
+The first three options are saved with the project (a template project carries them into every new project). THEME, QUICK MODULATION ASSIGN, and SWAP FACE KEYS are saved globally, across every project and boot. KEEP BPM ON LOAD is the exception: session only, always off at boot and never written to disk, so you flip it on by hand each time you want it for a live set.
 
 ---
 
@@ -497,4 +499,5 @@ The first four options are saved with the project, so a template project (see th
 
 - **Rare tiny audio crackle, about once a minute**: this is the device's wifi radio interrupting audio. Turn wifi off in the system settings when recording or performing.
 - **No sound**: check the transport (tap START), the track gates (hold START and look at the bottom row), Triggers on the EUCLID view (a pattern with zero hits plays nothing), MUTE on the mixer (MIX view, hold L1: the faces show MUTE or UNMUTE per track), the master volume (R3 plus dpad up), and DRIFT's Mix on a track that seems silent but is running.
+- **While assigning a modulator or macro, the dpad changes the amount instead of letting me move to another parameter** (or the opposite): that is the **QUICK MODULATION ASSIGN** option (OPTIONS, on by default). On, the dpad adjusts the amount on the focused parameter while you hold R1 / R2. Off, the dpad moves across parameters to pick a destination first, then South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> plus dpad adjusts. Set it to whichever workflow you prefer.
 - **Stuck or strange state**: quit via MENU and relaunch. Projects are safe on the SD card once saved.
