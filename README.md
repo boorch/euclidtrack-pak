@@ -360,14 +360,21 @@ Open it from the view map: it sits on the last row, next to <img src="https://ra
 
 ### Recording
 
-With the shape layer (hold L1), **West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> is RECORD** and the other faces are inert. What RECORD does reads the loop's current state:
+With the shape layer (hold L1), **West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> is the record shape** and **North <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E38.svg" height="16" alt="north"> is OVERDUB ∞**. What West does reads the loop's current state:
 
-| State | RECORD does |
+| State | West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> does |
 |---|---|
-| empty | arms a capture. It punches in on the next QUANTIZE boundary and records LOOP LEN beats |
-| playing | overdubs one pass onto the loop |
-| recording | punches out early on the next boundary |
+| empty | arms a capture. It punches in on the next QUANTIZE boundary and records up to LOOP LEN beats |
+| recording | **PUNCH OUT**: finishes the loop now, at the full LOOP LEN. Whatever you did not record is silence |
+| playing | **OVERDUB 1**: layers one pass onto the loop, punching in on the next boundary |
+| overdubbing | **PUNCH OUT**: ends the pass, for OVERDUB 1 or OVERDUB ∞ |
 | armed | cancels the arm |
+
+North <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E38.svg" height="16" alt="north"> **OVERDUB ∞** arms an endless overdub from a playing loop: it keeps layering until you punch out with West. While it runs it drops off the deck and West reads PUNCH OUT; pressing North during an OVERDUB 1 turns that pass endless.
+
+**LOOP LEN is the loop's duration.** A punch-out never shortens the loop: it stays LOOP LEN beats, and any time you did not record is silence, or the layer beneath for an overdub. Set the length before you record.
+
+**Stopping restarts a capture.** Stop the transport while you are recording and the take in progress is discarded. The next play re-arms and records fresh from the top. A finished loop is not affected: it just restarts in time and keeps sounding through a stop.
 
 Once captured, the loop always plays. It restarts from the top every time the transport starts, and it keeps sounding through a stop, so you can fade a loop out by hand while everything else is silent.
 
@@ -377,15 +384,15 @@ Once captured, the loop always plays. It restarts from the top every time the tr
 |---|---|
 | K1 XFADE | equal-power crossfade from the live mix into the loop. Never saved |
 | K2 LOOP LEN | loop length in beats: 4, 8, 16, 32, 64 or 128 |
-| K3 QUANTIZE | the punch in and out grid: 1, 2, 4 or 8 beats |
-| K4 OVERDUB FBK | overdub feedback: 0 replaces the old layer, 100 percent stacks layers forever |
+| K3 QUANTIZE | the punch in and out grid: 1, 2, 4, 8 or 16 beats |
+| K4 OVERDUB FBK | overdub feedback: 0 replaces the old layer, 100 percent stacks layers forever. With OVERDUB ∞ this is how the layers build |
 | K5 TONE | the same bipolar DJ filter as the mixer's Tone, on the loop only. Negative is low-pass, positive is high-pass, center is flat. Never saved |
 
 The canvas draws the loop as a waveform: red while recording, dim white while playing, with a bright playhead riding across it.
 
 ### Clearing
 
-The CLEAR layer (hold L2) here becomes UNDO, REDO, ERASE BUFFER and RESET PARAMS. RESET PARAMS (South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> ) returns the four cells to their defaults but leaves the audio alone. ERASE BUFFER (East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> ) drops the captured loop, so it asks first: West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> confirms, South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> cancels.
+The CLEAR layer (hold L2) here becomes UNDO, REDO, ERASE BUFFER and RESET PARAMS. RESET PARAMS (South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> ) returns the four cells to their defaults but leaves the audio alone. ERASE BUFFER (East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> ) drops the captured loop, so it asks first: West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> confirms, South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> cancels. Both answer the prompt even while you keep L2 held.
 
 ### What saves
 
@@ -480,10 +487,11 @@ Press MENU and choose **START RECORDING**. The app records its final stereo outp
 | PREVIEW PARAM ON FIRST EDIT | when on, the first tweak of a cell only reveals its value instead of changing it |
 | THEME | DARK or LIGHT. LIGHT inverts the whole grayscale look; accent colors stay put |
 | KEEP BPM ON LOAD | when on, loading a project or starting a new one ignores the project tempo and keeps the current one. Handy with the LOOPER, so a captured loop stays in sync as you switch or start projects during a set |
+| LOAD QUANTIZE | OFF, or 4 / 8 / 16 beats. **Default 8.** With the transport playing, a project LOAD or NEW is held and drops in on the next downbeat on that grid, with a countdown over your work, so the incoming project lands in time. OFF, or the transport stopped, loads at once |
 | QUICK MODULATION ASSIGN | **on by default.** While you hold the assign shoulder (R1 for a modulator, R2 for a macro), the dpad sets the amount directly on the parameter you last focused; coarse and fine still apply, and the destination stays put. Turn it off if you would rather move the dpad across parameters to pick a destination first, then adjust with South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> plus dpad |
 | SWAP FACE KEYS | **off by default.** Swaps X with Y and A with B on a gamepad's face buttons. The Brick's built-in controls are fixed, so this has no effect here; it is a desktop-gamepad option that rides in the same list |
 
-The first three options are saved with the project (a template project carries them into every new project). THEME, QUICK MODULATION ASSIGN, and SWAP FACE KEYS are saved globally, across every project and boot. KEEP BPM ON LOAD is the exception: session only, always off at boot and never written to disk, so you flip it on by hand each time you want it for a live set.
+The first three options are saved with the project (a template project carries them into every new project). THEME, QUICK MODULATION ASSIGN, SWAP FACE KEYS, and LOAD QUANTIZE are saved globally, across every project and boot. KEEP BPM ON LOAD is the exception: session only, always off at boot and never written to disk, so you flip it on by hand each time you want it for a live set.
 
 ---
 
@@ -500,4 +508,5 @@ The first three options are saved with the project (a template project carries t
 - **Rare tiny audio crackle, about once a minute**: this is the device's wifi radio interrupting audio. Turn wifi off in the system settings when recording or performing.
 - **No sound**: check the transport (tap START), the track gates (hold START and look at the bottom row), Triggers on the EUCLID view (a pattern with zero hits plays nothing), MUTE on the mixer (MIX view, hold L1: the faces show MUTE or UNMUTE per track), the master volume (R3 plus dpad up), and DRIFT's Mix on a track that seems silent but is running.
 - **While assigning a modulator or macro, the dpad changes the amount instead of letting me move to another parameter** (or the opposite): that is the **QUICK MODULATION ASSIGN** option (OPTIONS, on by default). On, the dpad adjusts the amount on the focused parameter while you hold R1 / R2. Off, the dpad moves across parameters to pick a destination first, then South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> plus dpad adjusts. Set it to whichever workflow you prefer.
+- **A project loads (or a new project appears) only after a wait, or only on the beat** (or the opposite, it loads the instant I pick it): that is **LOAD QUANTIZE** (OPTIONS). With the transport playing and it set to 4 / 8 / 16, a LOAD or NEW is held until the next downbeat on that grid, so it lands in time, and a countdown shows meanwhile. Set it to OFF, or stop the transport, for an immediate load.
 - **Stuck or strange state**: quit via MENU and relaunch. Projects are safe on the SD card once saved.
