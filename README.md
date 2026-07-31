@@ -31,7 +31,7 @@ Your projects live in `/mnt/SDCARD/EUCLIDTRACK/`, outside the app folder. They s
 ## Launching and quitting
 
 - Launch **EUCLIDTRACK** from the Tools menu.
-- The device volume buttons work as usual. Master volume inside the app is a separate control (R3 plus dpad up/down) and always starts at unity on launch.
+- The device volume buttons work as usual. Master volume inside the app is a separate control (Utility Right plus dpad up/down) and always starts at unity on launch.
 - To quit: press MENU, choose QUIT.
 
 ## Making sound: two switches stand between you and audio
@@ -40,7 +40,7 @@ A fresh boot is silent on purpose. Three things have to happen:
 
 1. Most important thing: **Hold SELECT to bring up minimap**, use dpad to focus on a cell, release SELECT to jump on that view.
 2. **Start the transport.** Tap and release START (a quick tap, not a hold). The tempo light starts flashing. Tap again to stop.
-3. **Open at least one track's gate.** Hold START (or R3) and press a face button: West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> is track 1, North <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E38.svg" height="16" alt="north"> is track 2, East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> is track 3, South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> is track 4. While you hold, the bottom row shows each track's gate state: ▶ means open, ■ means closed. A track with a closed gate makes no sound, no matter what else is set.
+3. **Open at least one track's gate.** Hold START (or Utility Right) and press a face button: West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> is track 1, North <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E38.svg" height="16" alt="north"> is track 2, East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> is track 3, South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> is track 4. While you hold, the bottom row shows each track's gate state: ▶ means open, ■ means closed. A track with a closed gate makes no sound, no matter what else is set.
 4. **Give the sequencer something to play.** On the EUCLID view, either raise **Triggers** so the pattern has hits in it, or set **Steps** all the way down to **Drone** for a continuous, infinite tone.
 
 Transport running, a gate open, and a pattern with hits (or a drone): now you have sound.
@@ -89,13 +89,15 @@ Transport running, a gate open, and a pattern with hits (or a drone): now you ha
 | L2 + R2 | randomize the current device | |
 | R1 | MODULATOR view on/off | MOD assign · inside the MODULATOR view: + dpad left/right browses the four slots (release then stays in the view) |
 | R2 | PERFORM view on/off | MACRO assign |
-| R3 | | + faces: track gates 1 to 4 · + dpad up/down: master volume · + dpad left/right: tempo down/up 1 BPM |
-| L3 | | + West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> tap: copy the current view · + West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> held about 1.5 s: copy the whole track · + North <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E38.svg" height="16" alt="north"> tap: paste into the current view |
+| Utility Right | | + faces: track gates 1 to 4 · + dpad up/down: master volume · + dpad left/right: tempo down/up 1 BPM |
+| Utility Left | | + West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> tap: copy the current view · + West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> held about 1.5 s: copy the whole track · + North <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E38.svg" height="16" alt="north"> tap: paste into the current view |
 | Start | play / stop | + faces: track gates 1 to 4 |
 | MENU (or Select+Start) | project menu: SAVE, SAVE AS, LOAD, NEW, START RECORDING, OPTIONS, HELP, QUIT. Inside the menu, Select backs out one level | |
 | L1+L2+R1+R2 | **sends panic**: every ring send snaps to zero instantly | |
 
-Every layer announces itself on screen: hold L1, L2, L3, Start or R3 and the bottom row lists what the face buttons do right now (shapes, the CLEAR stack, COPY and PASTE, or each track's gate state). Release the layer and the row returns to the device tab bar.
+Every layer announces itself on screen: hold L1, L2, Utility Left, Start or Utility Right and the bottom row lists what the face buttons do right now (shapes, the CLEAR stack, COPY and PASTE, or each track's gate state). Release the layer and the row returns to the device tab bar.
+
+**Utility Left** and **Utility Right** are the two buttons under the screen. They are L3 and R3 on the original Brick, and L4 and R4 on the Brick Pro. On the Brick Pro the right stick also nudges the focused value, and clicking the right stick resets that value (with STICKS AS MACROS off; with it on, the right stick click is MACRO 10 instead).
 
 ---
 
@@ -142,7 +144,7 @@ Copy and paste are smart: a device pastes onto the same device on another track,
 ## Tracks and gates
 
 - **Start** toggles the transport.
-- **Start (or R3) held plus a face button** toggles a track's gate: West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> is track 1, North <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E38.svg" height="16" alt="north"> is track 2, East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> is track 3, South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> is track 4.
+- **Start (or Utility Right) held plus a face button** toggles a track's gate: West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> is track 1, North <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E38.svg" height="16" alt="north"> is track 2, East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> is track 3, South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> is track 4.
 - A gated off track fades by its FadeOut time and its reverb tail rings out naturally.
 - Track selection follows the view map rows: open any cell on T3's row and track 3 becomes the selected track.
 
@@ -508,7 +510,7 @@ The first three options, plus 2x MOD RANGE, are saved with the project (a templa
 ## Troubleshooting
 
 - **Rare tiny audio crackle, about once a minute**: this is the device's wifi radio interrupting audio. Turn wifi off in the system settings when recording or performing.
-- **No sound**: check the transport (tap START), the track gates (hold START and look at the bottom row), Triggers on the EUCLID view (a pattern with zero hits plays nothing), MUTE on the mixer (MIX view, hold L1: the faces show MUTE or UNMUTE per track), the master volume (R3 plus dpad up), and DRIFT's Mix on a track that seems silent but is running.
+- **No sound**: check the transport (tap START), the track gates (hold START and look at the bottom row), Triggers on the EUCLID view (a pattern with zero hits plays nothing), MUTE on the mixer (MIX view, hold L1: the faces show MUTE or UNMUTE per track), the master volume (Utility Right plus dpad up), and DRIFT's Mix on a track that seems silent but is running.
 - **While assigning a modulator or macro, the dpad changes the amount instead of letting me move to another parameter** (or the opposite): that is the **QUICK MODULATION ASSIGN** option (OPTIONS, on by default). On, the dpad adjusts the amount on the focused parameter while you hold R1 / R2. Off, the dpad moves across parameters to pick a destination first, then South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> plus dpad adjusts. Set it to whichever workflow you prefer.
 - **A project loads (or a new project appears) only after a wait, or only on the beat** (or the opposite, it loads the instant I pick it): that is **LOAD QUANTIZE** (OPTIONS). With the transport playing and it set to 4 / 8 / 16, a LOAD or NEW is held until the next downbeat on that grid, so it lands in time, and a countdown shows meanwhile. Set it to OFF, or stop the transport, for an immediate load.
 - **Stuck or strange state**: quit via MENU and relaunch. Projects are safe on the SD card once saved.
