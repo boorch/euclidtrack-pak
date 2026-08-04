@@ -130,6 +130,7 @@ SCN  󰿏  󱛟
 
 - Dpad steers. Up and down change row, left and right walk along a row, from a device through its pages to the modulators.
 - **Release Select** to open the highlighted cell. Releasing without moving does nothing, so peeking is always safe.
+- **Double-tap Select** quickly to latch the map open hands-free: steer without holding, then a single Select on a cell jumps there and unlatches, or MENU backs out with no jump. The chords below all work while it is latched.
 - The white cell is where you came from. Modulator cells are colored: red, blue, green, yellow for modulators 1 to 4.
 - While the map is open:
   - **South** <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> sets the highlighted modulator as the active one without closing the map.
