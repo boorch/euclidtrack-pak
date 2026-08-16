@@ -171,7 +171,7 @@ Copy and paste are smart: a device pastes onto the same device on another track,
 Two of these cells hide a popup on the cell push (West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> ; dpad chooses, West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> or South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> commits, East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> cancels):
 
 - **Triggers** picks the trigger mode. **TRIGGER** fires a short pulse per hit, percussive. **GATE** holds the gate open for the whole step, and back-to-back hits re-strike so each carries its own pitch. **TIE** keeps the gate high across consecutive hits: one held legato note whose pitch holds until the next rest.
-- **Rate** picks the timing feel. **STRAIGHT** is the plain division; **TRIPLET** and **DOTTED** stretch each step (progressively longer) for a swung or dotted groove.
+- **Rate** picks the timing feel. **STRAIGHT** is the plain division; **TRIPLET** squeezes three steps into the time of two (shorter, faster steps) and **DOTTED** stretches each step to one and a half times its straight length.
 
 ### <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF067D.svg" height="16" alt="ENGINE"> ENGINE, the voice
 
@@ -184,8 +184,8 @@ Page 1:
 | Timbre | the model's second macro control |
 | Morph | the model's third macro control |
 | Cutoff | the voice filter's frequency |
-| Resonance | the voice filter's resonance |
-| Filter Type | morphs the filter continuously: lowpass at 0, bandpass in the middle, highpass at full |
+| Resonance | the voice filter's resonance. It also brings in drive as it rises, and the lowpass self-oscillates at the top |
+| Filter Type | morphs the filter continuously: a Moog-style ladder lowpass at 0, blending into a PoliVoks-style filter for bandpass in the middle and highpass at full |
 | Pitch | the note, quantized to the global root and scale |
 
 Page 2:
