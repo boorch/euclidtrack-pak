@@ -41,7 +41,7 @@ A fresh boot is silent on purpose. Three things have to happen:
 1. Most important thing: **Hold SELECT to bring up minimap**, use dpad to focus on a cell, release SELECT to jump on that view.
 2. **Start the transport.** Tap and release START (a quick tap, not a hold). The tempo light starts flashing. Tap again to stop.
 3. **Open at least one track's gate.** Hold START (or Utility Right) and press a face button: West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> is track 1, North <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E38.svg" height="16" alt="north"> is track 2, East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> is track 3, South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> is track 4. While you hold, the bottom row shows each track's gate state: ▶ means open, ■ means closed. A track with a closed gate makes no sound, no matter what else is set.
-4. **Give the sequencer something to play.** On the EUCLID view, either raise **Triggers** so the pattern has hits in it, or set **Steps** all the way down to **Drone** for a continuous, infinite tone.
+4. **Give the sequencer something to play.** On the EUCLID view, either raise **TRIGGERS** so the pattern has hits in it, or set **STEPS** all the way down to **Drone** for a continuous, infinite tone.
 
 Transport running, a gate open, and a pattern with hits (or a drone): now you have sound.
 
@@ -146,7 +146,7 @@ Copy and paste are smart: a device pastes onto the same device on another track,
 
 - **Start** toggles the transport.
 - **Start (or Utility Right) held plus a face button** toggles a track's gate: West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> is track 1, North <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E38.svg" height="16" alt="north"> is track 2, East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> is track 3, South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> is track 4.
-- A gated off track fades by its FadeOut time and its reverb tail rings out naturally.
+- A gated off track fades by its FADEOUT time and its reverb tail rings out naturally.
 - Track selection follows the view map rows: open any cell on T3's row and track 3 becomes the selected track.
 
 ---
@@ -159,19 +159,19 @@ Copy and paste are smart: a device pastes onto the same device on another track,
 
 | Cell | Does |
 |---|---|
-| Steps | pattern length. The first choice below 2 is **Drone**: the gate holds open for a continuous tone and the pattern controls go inert |
-| Triggers | how many hits, spread evenly (the euclidean part) |
-| Rate | clock division of this track |
-| Probability | chance that each hit actually plays |
-| Shift | rotates the pattern |
-| Pad | appends silent steps after the pattern: the loop becomes Steps plus Pad long, with the padding always resting. Great for odd loop lengths and breathing room |
-| Reset Beat | restarts the pattern every N beats |
-| Shuffle | swing |
+| STEPS | pattern length. The first choice below 2 is **Drone**: the gate holds open for a continuous tone and the pattern controls go inert |
+| TRIGGERS | how many hits, spread evenly (the euclidean part) |
+| RATE | clock division of this track |
+| PROBABILITY | chance that each hit actually plays |
+| SHIFT | rotates the pattern |
+| PAD | appends silent steps after the pattern: the loop becomes STEPS plus PAD long, with the padding always resting. Great for odd loop lengths and breathing room |
+| RESET BEAT | restarts the pattern every N beats |
+| SHUFFLE | swing |
 
 Two of these cells hide a popup on the cell push (West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> ; dpad chooses, West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> or South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> commits, East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> cancels):
 
-- **Triggers** picks the trigger mode. **TRIGGER** fires a short pulse per hit, percussive. **GATE** holds the gate open for the whole step, and back-to-back hits re-strike so each carries its own pitch. **TIE** keeps the gate high across consecutive hits: one held legato note whose pitch holds until the next rest.
-- **Rate** picks the timing feel. **STRAIGHT** is the plain division; **TRIPLET** squeezes three steps into the time of two (shorter, faster steps) and **DOTTED** stretches each step to one and a half times its straight length.
+- **TRIGGERS** picks the trigger mode. **TRIGGER** fires a short pulse per hit, percussive. **GATE** holds the gate open for the whole step, and back-to-back hits re-strike so each carries its own pitch. **TIE** keeps the gate high across consecutive hits: one held legato note whose pitch holds until the next rest.
+- **RATE** picks the timing feel. **STRAIGHT** is the plain division; **TRIPLET** squeezes three steps into the time of two (shorter, faster steps) and **DOTTED** stretches each step to one and a half times its straight length.
 
 ### <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF067D.svg" height="16" alt="ENGINE"> ENGINE, the voice
 
@@ -179,42 +179,42 @@ Page 1:
 
 | Cell | Does |
 |---|---|
-| Engine | the synthesis model. Each model repurposes the three cells below in its own way |
-| Harmonics | the model's first macro control |
-| Timbre | the model's second macro control |
-| Morph | the model's third macro control |
-| Cutoff | the voice filter's frequency |
-| Resonance | the voice filter's resonance. It also brings in drive as it rises, and the lowpass self-oscillates at the top |
-| Filter Type | morphs the filter continuously: a Moog-style ladder lowpass at 0, blending into a PoliVoks-style filter for bandpass in the middle and highpass at full |
-| Pitch | the note, quantized to the global root and scale |
+| ENGINE | the synthesis model. Each model repurposes the three cells below in its own way |
+| HARMONICS | the model's first macro control |
+| TIMBRE | the model's second macro control |
+| MORPH | the model's third macro control |
+| CUTOFF | the voice filter's frequency |
+| RESONANCE | the voice filter's resonance. It also brings in drive as it rises, and the lowpass self-oscillates at the top |
+| FILTER TYPE | morphs the filter continuously: a Moog-style ladder lowpass at 0, blending into a PoliVoks-style filter for bandpass in the middle and highpass at full |
+| PITCH | the note, quantized to the global root and scale |
 
 Page 2:
 
 | Cell | Does |
 |---|---|
-| FadeIn | how long the track takes to fade in when its gate opens |
-| FadeOut | how long it takes to fade out when the gate closes. The DRIFT tail rings out past the fade |
-| LPG Decay | the plucked envelope's decay per hit |
-| LPG Color | the pluck's character, from soft and dark to snappy and bright |
-| Velocity | in euclidean mode: how hard each hit strikes, sampled once per trigger, so a modulator here makes accent patterns. In Drone mode: a continuous level control, so a modulator here makes smooth swells |
-| Out | which of the model's two outputs feed the chain: their mix, either one alone, or a true stereo split (straight or swapped) |
+| FADEIN | how long the track takes to fade in when its gate opens |
+| FADEOUT | how long it takes to fade out when the gate closes. The DRIFT tail rings out past the fade |
+| LPG DECAY | the plucked envelope's decay per hit |
+| LPG COLOR | the pluck's character, from soft and dark to snappy and bright |
+| VELOCITY | in euclidean mode: how hard each hit strikes, sampled once per trigger, so a modulator here makes accent patterns. In Drone mode: a continuous level control, so a modulator here makes smooth swells |
+| OUT | which of the model's two outputs feed the chain: their mix, either one alone, or a true stereo split (straight or swapped) |
 
 ### <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0F9E.svg" height="16" alt="DIMENSION"> DIMENSION
 
-A flanger and a chorus in series. Each has its own Wet, so you can run either alone or both.
+A flanger and a chorus in series. Each has its own WET, so you can run either alone or both.
 
-Fl Mode and Ch Mode are bipolar flavor cells. The center is the subtlest setting, each side leans into a named character, and everything between is a smooth blend, so a modulator can sweep the flavor without a jump.
+FL MODE and CH MODE are bipolar flavor cells. The center is the subtlest setting, each side leans into a named character, and everything between is a smooth blend, so a modulator can sweep the flavor without a jump.
 
 | Cell | Does |
 |---|---|
-| Fl Mode | flanger flavor. Negative is a hollow notching comb, positive a resonant jet, center a gentle modulated delay |
-| Fl Rate | flanger sweep speed |
-| Fl Depth | flanger sweep depth |
-| Fl Wet | flanger dry/wet |
-| Ch Mode | chorus flavor. Negative is a warm Juno thickening, positive a wide, spacious spread, center between the two |
-| Ch Rate | chorus movement speed |
-| Ch Depth | chorus movement depth |
-| Ch Wet | chorus dry/wet |
+| FL MODE | flanger flavor. Negative is a hollow notching comb, positive a resonant jet, center a gentle modulated delay |
+| FL RATE | flanger sweep speed |
+| FL DEPTH | flanger sweep depth |
+| FL WET | flanger dry/wet |
+| CH MODE | chorus flavor. Negative is a warm Juno thickening, positive a wide, spacious spread, center between the two |
+| CH RATE | chorus movement speed |
+| CH DEPTH | chorus movement depth |
+| CH WET | chorus dry/wet |
 
 ### <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0232.svg" height="16" alt="FILTER"> FILTER
 
@@ -235,44 +235,44 @@ Eight fixed bands, one cell per band, cut and boost around the middle. All eight
 
 | Cell | Does |
 |---|---|
-| Algo | picks the saturation algorithm from a generous menu of drive flavors |
-| Drive | how hard the signal pushes into the algorithm |
-| Bias | asymmetry: skews the drive for even-harmonic, pushed-transformer character |
-| Comp | the per track compressor, sitting at the very end of the track's chain |
-| Base | low corner of the drive's tone filter |
-| Width | how many octaves above Base stay open |
-| Dirt | bipolar. Negative fades in tape hiss, positive vinyl crackle, silent at center. Added after the reverb so it stays a dry surface layer |
-| Wet | dry/wet of the drive section |
+| ALGO | picks the saturation algorithm from a generous menu of drive flavors |
+| DRIVE | how hard the signal pushes into the algorithm |
+| BIAS | asymmetry: skews the drive for even-harmonic, pushed-transformer character |
+| COMP | the per track compressor, sitting at the very end of the track's chain |
+| BASE | low corner of the drive's tone filter |
+| WIDTH | how many octaves above BASE stay open |
+| DIRT | bipolar. Negative fades in tape hiss, positive vinyl crackle, silent at center. Added after the reverb so it stays a dry surface layer |
+| WET | dry/wet of the drive section |
 
 ### <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0AC4.svg" height="16" alt="DRIFT"> DRIFT, the hybrid morphing delay/reverb
 
-DRIFT is one machine that morphs between two identities: at low Morph it is a clean stereo delay with ping pong cross feedback, at high Morph a dense diffused reverb wash, and everywhere in between is playable space.
+DRIFT is one machine that morphs between two identities: at low MORPH it is a clean stereo delay with ping pong cross feedback, at high MORPH a dense diffused reverb wash, and everywhere in between is playable space.
 
 Page 1:
 
 | Cell | Does |
 |---|---|
-| Size | room size, with a tape style pitch glide when moved |
-| Damp | high frequency decay of the tail |
-| Feedback | tail length. The top of the range goes over unity and self sustains into a saturating wall, on purpose |
-| Morph | crossfades clean stereo delay into diffused reverb wash. Low Morph with high Feedback is a ping pong echo |
-| Shift | frequency shifter in the feedback path, in Hz, inharmonic by nature |
-| Motion | modulates the delay line lengths with a slow internal LFO, rate and depth rising together on one control: subtle settings breathe and shimmer the tail, high settings bend it into detuned, seasick movement |
-| Duck | the wet output ducks under the dry input and blooms back in the gaps |
-| Mix | dry/wet. At zero nothing of DRIFT is heard, including the resonator and the shimmer |
+| SIZE | room size, with a tape style pitch glide when moved |
+| DAMP | high frequency decay of the tail |
+| FEEDBACK | tail length. The top of the range goes over unity and self sustains into a saturating wall, on purpose |
+| MORPH | crossfades clean stereo delay into diffused reverb wash. Low MORPH with high FEEDBACK is a ping pong echo |
+| SHIFT | frequency shifter in the feedback path, in Hz, inharmonic by nature |
+| MOTION | modulates the delay line lengths with a slow internal LFO, rate and depth rising together on one control: subtle settings breathe and shimmer the tail, high settings bend it into detuned, seasick movement |
+| DUCK | the wet output ducks under the dry input and blooms back in the gaps |
+| MIX | dry/wet. At zero nothing of DRIFT is heard, including the resonator and the shimmer |
 
 Page 2:
 
 | Cell | Does |
 |---|---|
-| Width | stereo width of the wet, mono to very wide |
-| Saturation | brightness and drive of the wet top end |
-| Shimmer Fbk | how much pitch shifted signal recirculates through the tail. Zero is off |
-| Shimmer Amt | the shimmer blend, bipolar. Center is off. Turning right fades in an octave up, then an octave down joins past halfway. Turning left fades in a fifth plus the octave together, then two octaves up join past halfway for the full choir |
-| Reso Tune | the resonator's pitch, quantized to root and scale |
-| Reso Drift | spreads the resonator's upper voices away from pure harmony |
-| Reso Fbk | resonator ring length and brightness |
-| Reso Amt | how much of the reverb input runs through the resonator. At full, the space breathes pure resonator |
+| WIDTH | stereo width of the wet, mono to very wide |
+| SATURATION | brightness and drive of the wet top end |
+| SHIMMER FBK | how much pitch shifted signal recirculates through the tail. Zero is off |
+| SHIMMER AMT | the shimmer blend, bipolar. Center is off. Turning right fades in an octave up, then an octave down joins past halfway. Turning left fades in a fifth plus the octave together, then two octaves up join past halfway for the full choir |
+| RESO TUNE | the resonator's pitch, quantized to root and scale |
+| RESO DRIFT | spreads the resonator's upper voices away from pure harmony |
+| RESO FBK | resonator ring length and brightness |
+| RESO AMT | how much of the reverb input runs through the resonator. At full, the space breathes pure resonator |
 
 The resonator is a three voice tuned comb bank sitting in front of the reverb. The shimmer is a granular pitch shifter inside the reverb's feedback loop, so every pass climbs through the chosen intervals.
 
@@ -280,14 +280,14 @@ The resonator is a three voice tuned comb bank sitting in front of the reverb. T
 
 ## <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0EA2.svg" height="16" alt="MIX"> MIX
 
-Page 1: Volume and Tone per track. Page 2: Pan per track, then the master strip:
+Page 1: VOLUME and TONE per track. Page 2: PAN per track, then the master strip:
 
 | Cell | Does |
 |---|---|
-| Master Comp | bipolar: negative pumps (sidechain duck), zero bypasses, positive glues. The row under it is a live gain reduction meter |
-| SC Source | what the compressor listens to: the master sum, or one track (point it at your kick for classic pumping) |
-| SC Filter | tone tilt on the listening signal only |
-| Bass Mono | collapses the low band to mono, crossover 30 to 200 Hz |
+| MASTER COMP | bipolar: negative pumps (sidechain duck), zero bypasses, positive glues. The row under it is a live gain reduction meter |
+| SC SOURCE | what the compressor listens to: the master sum, or one track (point it at your kick for classic pumping) |
+| SC FILTER | tone tilt on the listening signal only |
+| BASS MONO | collapses the low band to mono, crossover 30 to 200 Hz |
 
 In MIX view, the shape layer (hold L1) mutes and unmutes tracks. Mute is a hard cut after everything; gates fade and leave tails.
 
@@ -341,13 +341,13 @@ Things to know:
 
 **Recipes to start with:**
 
-- **Delay into reverb.** Set T1's DRIFT to low Morph with high Feedback (its delay mode) and T2's to high Morph with Feedback around 70 and a generous Size, then raise SEND T1>T2. T1's hits echo in its own delay, and every echo drifts onward into T2's reverb: the classic delay feeding a reverb, split across two tracks with separate tone controls over each stage.
-- **Ethereal delay lines.** Both tracks on low Morph, high Feedback, slightly different Sizes, sends raised both ways between them. The two delays feed each other and the echoes stagger into long irregular trails that never quite repeat. Add a touch of Shimmer on one side and the trails start climbing.
-- **The silent processor.** Turn T4's Triggers to zero so it plays nothing of its own, then dial its filter, COLOR and DRIFT as an effect chain and send T3 into it. You just built a return channel.
+- **Delay into reverb.** Set T1's DRIFT to low MORPH with high FEEDBACK (its delay mode) and T2's to high MORPH with FEEDBACK around 70 and a generous SIZE, then raise SEND T1>T2. T1's hits echo in its own delay, and every echo drifts onward into T2's reverb: the classic delay feeding a reverb, split across two tracks with separate tone controls over each stage.
+- **Ethereal delay lines.** Both tracks on low MORPH, high FEEDBACK, slightly different SIZE values, sends raised both ways between them. The two delays feed each other and the echoes stagger into long irregular trails that never quite repeat. Add a touch of Shimmer on one side and the trails start climbing.
+- **The silent processor.** Turn T4's TRIGGERS to zero so it plays nothing of its own, then dial its filter, COLOR and DRIFT as an effect chain and send T3 into it. You just built a return channel.
 - **The breathing mix.** Map a slow LFO onto one send with a small amount. The cross-bleed swells and fades and the whole mix starts to move on its own.
-- **The ecosystem.** Raise several sends to around 30 or 40 percent with DRIFT wet and Feedback high on every track, then perform with the track gates: every gate you open or close reroutes the whole network. This is the deep end.
+- **The ecosystem.** Raise several sends to around 30 or 40 percent with DRIFT wet and FEEDBACK high on every track, then perform with the track gates: every gate you open or close reroutes the whole network. This is the deep end.
 
-**A warning about extreme feedback.** With several sends high and DRIFT Feedback past its self-sustain point, the network becomes a self oscillating instrument. The output is always limited and cannot clip or run away, but it can jump from quiet to VERY loud in an instant, and screaming resonances are part of the deal. Turn the master volume down before you go exploring, be gentle with headphones, and remember the fast exits: grab all four shoulders at once (every send snaps to zero), or stop the transport. What happens in the network is your responsibility. Have fun.
+**A warning about extreme feedback.** With several sends high and DRIFT FEEDBACK past its self-sustain point, the network becomes a self oscillating instrument. The output is always limited and cannot clip or run away, but it can jump from quiet to VERY loud in an instant, and screaming resonances are part of the deal. Turn the master volume down before you go exploring, be gentle with headphones, and remember the fast exits: grab all four shoulders at once (every send snaps to zero), or stop the transport. What happens in the network is your responsibility. Have fun.
 
 The master bus ends in a lookahead limiter. It is always on, not a control you set; four loud tracks cannot clip the output.
 
@@ -385,11 +385,11 @@ Once captured, the loop always plays. It restarts from the top every time the tr
 
 | Cell | Does |
 |---|---|
-| K1 XFADE | equal-power crossfade from the live mix into the loop. Never saved |
-| K2 LOOP LEN | loop length in beats: 4, 8, 16, 32, 64 or 128 |
-| K3 QUANTIZE | the punch in and out grid: 1, 2, 4, 8 or 16 beats |
-| K4 OVERDUB FBK | overdub feedback: 0 replaces the old layer, 100 percent stacks layers forever. With OVERDUB ∞ this is how the layers build |
-| K5 TONE | the same bipolar DJ filter as the mixer's Tone, on the loop only. Negative is low-pass, positive is high-pass, center is flat. Never saved |
+| XFADE | equal-power crossfade from the live mix into the loop. Never saved |
+| LOOP LEN | loop length in beats: 4, 8, 16, 32, 64 or 128 |
+| QUANTIZE | the punch in and out grid: 1, 2, 4, 8 or 16 beats |
+| OVERDUB FBK | overdub feedback: 0 replaces the old layer, 100 percent stacks layers forever. With OVERDUB ∞ this is how the layers build |
+| TONE | the same bipolar DJ filter as the mixer's TONE, on the loop only. Negative is low-pass, positive is high-pass, center is flat. Never saved |
 
 The canvas draws the loop as a waveform: red while recording, dim white while playing, with a bright playhead riding across it.
 
@@ -437,7 +437,7 @@ Twelve performance macros: M1 to M8 are sliders, M9 to M12 are momentary action 
 - **Tap R2**: the PERFORM view. Dpad focuses a slider, South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> plus dpad moves it. With the shape layer (hold L1), the faces fire M9 to M12, and they stay active only while held.
 - **Hold North <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E38.svg" height="16" alt="north"> in PERFORM** to open the macro picker: dpad chooses any of the twelve, release confirms. That macro becomes the active one.
 - **Hold R2 to assign** on any device view: focus a cell, dial the amount, West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> flips polarity, East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> clears. Release when done.
-- The same hold works inside a MODULATOR view: assign a macro to a track or MIX modulator's own cells (Rate, Phase, and the rest), so one slider can, say, sweep a modulator's speed. The one exception is PERFORM's own modulators, since they drive the macros themselves; trying it there just shows a toast explaining why.
+- The same hold works inside a MODULATOR view: assign a macro to a track or MIX modulator's own cells (RATE, PHASE, and the rest), so one slider can, say, sweep a modulator's speed. The one exception is PERFORM's own modulators, since they drive the macros themselves; trying it there just shows a toast explaining why.
 
 A macro can drive dozens of parameters at once across every track.
 
@@ -456,7 +456,7 @@ Hold **L2** and the face buttons become:
 
 The deck row shows these while L2 is down. Undo history covers parameter edits, resets, randomize, paste and scene operations. In the LOOPER view the East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> face is ERASE BUFFER instead of RESET MOD, since the looper has no modulation to clear.
 
-**L2 plus R2 together randomizes the current device.** It is curated per device: on EUCLID it rolls the pattern but never Probability, Reset Beat or Drone, and never lands on silence.
+**L2 plus R2 together randomizes the current device.** It is curated per device: on EUCLID it rolls the pattern but never PROBABILITY, RESET BEAT or Drone, and never lands on silence.
 
 ---
 
@@ -505,15 +505,15 @@ The first three options, plus 2x MOD RANGE, are saved with the project (a templa
 ## Tips
 
 - The randomizer (L2 plus R2) plus undo (West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> with L2 held) is a fast idea machine: roll, listen, undo, roll again.
-- DRIFT's Feedback above 85 percent self sustains forever. Park a drone track into it, gate the track off, and play over the wall of sound.
-- Set Steps to Drone and modulate Velocity with a slow LFO for evolving pads that breathe on their own.
-- An LFO on Shimmer Amt morphs the shimmer choir while it blooms.
+- DRIFT's FEEDBACK above 85 percent self sustains forever. Park a drone track into it, gate the track off, and play over the wall of sound.
+- Set STEPS to Drone and modulate VELOCITY with a slow LFO for evolving pads that breathe on their own.
+- An LFO on SHIMMER AMT morphs the shimmer choir while it blooms.
 - The map plus copy chords make sound design fast: build one great track, hold Select, copy the whole row, paste it onto another track, then vary.
 
 ## Troubleshooting
 
 - **Rare tiny audio crackle, about once a minute**: this is the device's wifi radio interrupting audio. Turn wifi off in the system settings when recording or performing.
-- **No sound**: check the transport (tap START), the track gates (hold START and look at the bottom row), Triggers on the EUCLID view (a pattern with zero hits plays nothing), MUTE on the mixer (MIX view, hold L1: the faces show MUTE or UNMUTE per track), the master volume (Utility Right plus dpad up), and DRIFT's Mix on a track that seems silent but is running.
+- **No sound**: check the transport (tap START), the track gates (hold START and look at the bottom row), TRIGGERS on the EUCLID view (a pattern with zero hits plays nothing), MUTE on the mixer (MIX view, hold L1: the faces show MUTE or UNMUTE per track), the master volume (Utility Right plus dpad up), and DRIFT's MIX on a track that seems silent but is running.
 - **While assigning a modulator or macro, the dpad changes the amount instead of letting me move to another parameter** (or the opposite): that is the **QUICK MODULATION ASSIGN** option (OPTIONS, on by default). On, the dpad adjusts the amount on the focused parameter while you hold R1 / R2. Off, the dpad moves across parameters to pick a destination first, then South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> plus dpad adjusts. Set it to whichever workflow you prefer.
 - **A project loads (or a new project appears) only after a wait, or only on the beat** (or the opposite, it loads the instant I pick it): that is **LOAD QUANTIZE** (OPTIONS). With the transport playing and it set to 4 / 8 / 16, a LOAD or NEW is held until the next downbeat on that grid, so it lands in time, and a countdown shows meanwhile. Set it to OFF, or stop the transport, for an immediate load.
 - **Stuck or strange state**: quit via MENU and relaunch. Projects are safe on the SD card once saved.
