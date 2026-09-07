@@ -1,6 +1,6 @@
 # EUCLIDTRACK for TrimUI Brick
 
-EUCLIDTRACK is an experimental synth workstation with a singular focus: generating melodies through euclidean sequencing and pitch modulation using LFOs. Four tracks, each with its own synth voice, euclidean sequencer, and effect chain, all driven from the Brick's buttons. Sixty four scenes, four modulators per track, twelve performance macros, generous saturation with many drive algorithms, a hybrid morphing delay/reverb with a resonator and a shimmer stage, and a mixer that lets you build a feedback network for unique organismic (and slightly dangerous) results!
+EUCLIDTRACK is an experimental synth workstation for generating melodies and rhythms through euclidean sequencing and modulation. Four tracks, each with its own synth voice, euclidean sequencer, and effect chain, all driven from the Brick's buttons, drawing from a deep collection of engines spanning virtual analog, FM, physical models, sample romplers, wavetables and drum machines. Sixty four scenes, four modulators per track, twelve performance macros, generous saturation with many drive algorithms, a hybrid morphing delay/reverb with a resonator and a shimmer stage, a master bus live looper, and a mixer that lets you build a feedback network for unique organismic (and slightly dangerous) results!
 
 ![EUCLIDTRACK boot splash](https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/screenshots/01.png)
 
