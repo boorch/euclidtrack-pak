@@ -241,7 +241,7 @@ Eight fixed bands, one cell per band, cut and boost around the middle. All eight
 | COMP | the per track compressor, sitting at the very end of the track's chain |
 | BASE | low corner of the drive's tone filter |
 | WIDTH | how many octaves above BASE stay open |
-| DIRT | bipolar. Negative fades in tape hiss, positive vinyl crackle, silent at center. Added after the reverb so it stays a dry surface layer |
+| DIRT | bipolar, silent at center. By default negative fades in tape hiss, positive vinyl crackle. Each track can swap the flavor to WHITE/PINK under OPTIONS, then PROJECT SETTINGS: generated noise (white on the negative side, pink on the positive) with amplitude-based excitation, so it opens with the track's level and fades out when the track goes quiet. Either flavor is added after the reverb, follows COLOR's BASE and WIDTH tone window, and stays a dry surface layer |
 | WET | dry/wet of the drive section |
 
 ### <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0AC4.svg" height="16" alt="DRIFT"> DRIFT, the hybrid morphing delay/reverb
@@ -424,6 +424,7 @@ Four modulators per track, four for MIX, four for PERFORM. Each is an LFO with w
 
 - **Tap R1**: the MODULATOR view for the active slot, with a live scope. The main cell cycles waveforms. With the shape layer (hold L1), West <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E35.svg" height="16" alt="west"> opens the waveform category menu and South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> rerolls random shapes.
 - Waveforms: Sine, Tri, Saw up, Saw down, Square, sample and hold (random and seeded), plus follower shapes that react to another track's audio or gates, and step sequence shapes.
+- Follower shapes swap the cells to INPUT, ATTACK, RELEASE and FILTER IN. FILTER IN tone-filters only what the audio follower listens to, never the audible signal: turn it negative to focus on the source's lows (isolate the kick out of a busy drum track), positive to focus on its highs. It is disabled for the gate follower, which listens to triggers rather than audio.
 - Rates are clock synced. The square wave rises at the start of its cycle, like a clock gate.
 - **Play modes** (shape layer East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> cycles LOOP, RETRIG, ONCE): LOOP is the usual free running cycle. RETRIG restarts the cycle on every hit of the track. ONCE plays a single pass per hit and then holds: smooth shapes become envelopes of any shape (skew one for attack and decay), S&H and Seq 32 advance exactly one step per hit so the hits become the clock, and Seq DIV fires its whole sequence once per hit. RETRIG and ONCE wait at their start point until the track's first hit, and restarting the transport rewinds them. Follower shapes and the MIX and PERFORM modulators always loop.
 - **Pick the active modulator** in the view map: highlight a <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF095B.svg" height="16" alt="MODULATOR"> cell and press South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> or just open the cell. Inside the MODULATOR view, hold R1 and press dpad left/right to browse the four slots directly; releasing R1 after browsing stays in the view, while a plain R1 tap still exits.
@@ -486,19 +487,29 @@ Press MENU and choose **START RECORDING**. The app records its final stereo outp
 
 | Row | Does |
 |---|---|
-| PITCH MOD RANGE | how far modulation can push pitch: about 1.7 octaves, or the full range |
-| EUC PITCH S&H DELAY | a tiny wait before each hit samples its pitch, so modulation has settled first. Pure utility: mostly you won't need to touch the default value |
-| PREVIEW PARAM ON FIRST EDIT | when on, the first tweak of a cell only reveals its value instead of changing it |
+| PROJECT SETTINGS | the options saved with the project live in here. South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> opens the submenu, East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> steps back to this list (another East <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E37.svg" height="16" alt="east"> closes OPTIONS). See the table below |
 | THEME | DARK or LIGHT. LIGHT inverts the whole grayscale look; accent colors stay put |
 | KEEP BPM ON LOAD | when on, loading a project or starting a new one ignores the project tempo and keeps the current one. Handy with the LOOPER, so a captured loop stays in sync as you switch or start projects during a set |
 | LOAD QUANTIZE | OFF, or 4 / 8 / 16 beats. **Default 8.** With the transport playing, a project LOAD or NEW is held and drops in on the next downbeat on that grid, with a countdown over your work, so the incoming project lands in time. OFF, or the transport stopped, loads at once |
 | QUICK MODULATION ASSIGN | **on by default.** While you hold the assign shoulder (R1 for a modulator, R2 for a macro), the dpad sets the amount directly on the parameter you last focused; coarse and fine still apply, and the destination stays put. Turn it off if you would rather move the dpad across parameters to pick a destination first, then adjust with South <img src="https://raw.githubusercontent.com/boorch/euclidtrack-pak/main/.github/icons/uF0E34.svg" height="16" alt="south"> plus dpad |
 | SWAP FACE KEYS | **off by default.** Swaps X with Y and A with B on a gamepad's face buttons. The Brick's built-in controls are fixed, so this has no effect here; it is a desktop-gamepad option that rides in the same list |
 | STICKS AS MACROS | **off by default, and only shown on the Brick Pro or Smart Pro.** It drives the analog sticks, which the original Brick does not have, so the row is hidden on the original Brick (on desktop it appears when a gamepad is connected). Turns the two sticks into live macro controls, like two XY pads: the left stick offsets MACRO 1 (X) and MACRO 2 (Y), the right stick offsets MACRO 3 (X) and MACRO 4 (Y), and clicking a stick fires MACRO 9 (left) or MACRO 10 (right). The offset is momentary, springing back to the macro's set value as the stick recenters, and it applies in every view. A bipolar macro takes the full swing either side of center; a unipolar one takes the stick's distance from center |
-| 2x MOD RANGE | **off by default, and saved with the project.** Doubles every modulation contribution, LFOs and PERFORM macros, both unipolar and bipolar. On, a full assignment reaches twice as far: a unipolar modulator sweeps a parameter's whole range (0% to 100%) instead of stopping at the midpoint. It also doubles the PITCH MOD RANGE, and that row's label updates to match (±1.67 becomes ±3.33 oct, FULL becomes FULL ×2). Bipolar modulators that already reached both rails clamp harder when this is on. Leave it off to keep older projects sounding the same |
+| PREVIEW PARAM ON FIRST EDIT | when on, the first tweak of a cell only reveals its value instead of changing it. Now remembered on the device rather than per project, so it follows you across every project and boot |
 | ANALOG FILTER | **on by default.** Runs the lowpass ladder in a more analog mode where the filter poles sag and recover with the signal, for a small CPU cost. Turn it off for the cleaner, cheaper filter |
 
-The first three options, plus 2x MOD RANGE, are saved with the project (a template project carries them into every new project). THEME, QUICK MODULATION ASSIGN, SWAP FACE KEYS, LOAD QUANTIZE, STICKS AS MACROS, and ANALOG FILTER are saved globally, across every project and boot. KEEP BPM ON LOAD is the exception: session only, always off at boot and never written to disk, so you flip it on by hand each time you want it for a live set.
+### Project settings (OPTIONS, then PROJECT SETTINGS)
+
+Everything in this submenu is saved with the project (a template project carries its values into every new project).
+
+| Row | Does |
+|---|---|
+| PITCH MOD RANGE | how far modulation can push pitch: about 1.7 octaves, or the full range |
+| EUC PITCH S&H DELAY | a tiny wait before each hit samples its pitch, so modulation has settled first. Pure utility: mostly you won't need to touch the default value |
+| 2x MOD RANGE | **off by default.** Doubles every modulation contribution, LFOs and PERFORM macros, both unipolar and bipolar. On, a full assignment reaches twice as far: a unipolar modulator sweeps a parameter's whole range (0% to 100%) instead of stopping at the midpoint. It also doubles the PITCH MOD RANGE, and that row's label updates to match (±1.67 becomes ±3.33 oct, FULL becomes FULL ×2). Bipolar modulators that already reached both rails clamp harder when this is on. Leave it off to keep older projects sounding the same |
+| MOD SMOOTHING | SMOOTH is the classic gliding response, where every modulator eases into its new value. FAST makes stepped modulation, like Seq32 or Square, snap between values on HARMONICS, TIMBRE, MORPH and CUTOFF |
+| DIRT NOISE T1 to T4 | one row per track. TAPE/VINYL is the classic baked loops. WHITE/PINK is generated noise that opens with the track signal instead: white noise on the negative side of Dirt, pink on the positive |
+
+Everything else lives on the main OPTIONS list. THEME, QUICK MODULATION ASSIGN, SWAP FACE KEYS, LOAD QUANTIZE, STICKS AS MACROS, PREVIEW PARAM ON FIRST EDIT, and ANALOG FILTER are saved globally, across every project and boot. KEEP BPM ON LOAD is the exception: session only, always off at boot and never written to disk, so you flip it on by hand each time you want it for a live set.
 
 ---
 
