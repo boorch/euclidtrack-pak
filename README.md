@@ -495,7 +495,7 @@ Press MENU and choose **START RECORDING**. The app records its final stereo outp
 | SWAP FACE KEYS | **off by default.** Swaps X with Y and A with B on a gamepad's face buttons. The Brick's built-in controls are fixed, so this has no effect here; it is a desktop-gamepad option that rides in the same list |
 | STICKS AS MACROS | **off by default, and only shown on the Brick Pro or Smart Pro.** It drives the analog sticks, which the original Brick does not have, so the row is hidden on the original Brick (on desktop it appears when a gamepad is connected). Turns the two sticks into live macro controls, like two XY pads: the left stick offsets MACRO 1 (X) and MACRO 2 (Y), the right stick offsets MACRO 3 (X) and MACRO 4 (Y), and clicking a stick fires MACRO 9 (left) or MACRO 10 (right). The offset is momentary, springing back to the macro's set value as the stick recenters, and it applies in every view. A bipolar macro takes the full swing either side of center; a unipolar one takes the stick's distance from center |
 | PREVIEW PARAM ON FIRST EDIT | when on, the first tweak of a cell only reveals its value instead of changing it. Now remembered on the device rather than per project, so it follows you across every project and boot |
-| ANALOG FILTER | **on by default.** Runs the lowpass ladder in a more analog mode where the filter poles sag and recover with the signal, for a small CPU cost. Turn it off for the cleaner, cheaper filter |
+| ANALOG FILTER | **off by default.** When on, the lowpass ladder runs in a more analog mode where the filter poles sag and recover with the signal, for a small CPU cost. Leave it off for the cleaner, cheaper filter |
 
 ### Project settings (OPTIONS, then PROJECT SETTINGS)
 
