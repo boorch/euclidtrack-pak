@@ -185,7 +185,7 @@ Page 1:
 | MORPH | the model's third macro control |
 | CUTOFF | the voice filter's frequency |
 | RESONANCE | the voice filter's resonance. It also brings in drive as it rises, and the lowpass self-oscillates at the top |
-| FILTER TYPE | morphs the filter continuously: a Moog-style ladder lowpass at 0, blending into a PoliVoks-style filter for bandpass in the middle and highpass at full |
+| FILTER TYPE | morphs the filter continuously: a Moog-style ladder lowpass at 0, blending into a PoliVoks-style filter for bandpass in the middle and highpass at full. Prefer the pre-ladder voicing? Set LPF FLAVOR to POLIVOKS for that track under OPTIONS, then PROJECT SETTINGS, and the PoliVoks runs across the whole range, lowpass included |
 | PITCH | the note, quantized to the global root and scale |
 
 Page 2:
@@ -508,6 +508,7 @@ Everything in this submenu is saved with the project (a template project carries
 | 2x MOD RANGE | **off by default.** Doubles every modulation contribution, LFOs and PERFORM macros, both unipolar and bipolar. On, a full assignment reaches twice as far: a unipolar modulator sweeps a parameter's whole range (0% to 100%) instead of stopping at the midpoint. It also doubles the PITCH MOD RANGE, and that row's label updates to match (±1.67 becomes ±3.33 oct, FULL becomes FULL ×2). Bipolar modulators that already reached both rails clamp harder when this is on. Leave it off to keep older projects sounding the same |
 | MOD SMOOTHING | SMOOTH is the classic gliding response, where every modulator eases into its new value. FAST makes stepped modulation, like Seq32 or Square, snap between values on HARMONICS, TIMBRE, MORPH and CUTOFF |
 | DIRT NOISE T1 to T4 | one row per track. TAPE/VINYL is the classic baked loops. WHITE/PINK is generated noise that opens with the track signal instead: white noise on the negative side of Dirt, pink on the positive |
+| LPF FLAVOR T1 to T4 | one row per track: which filter serves the FILTER TYPE range. LADDER is the modern lowpass, covering the bottom of the range and crossfading into the classic filter for bandpass and highpass. POLIVOKS runs the classic filter across the whole range instead, lowpass included, and is a little cheaper to run |
 
 Everything else lives on the main OPTIONS list. THEME, QUICK MODULATION ASSIGN, SWAP FACE KEYS, LOAD QUANTIZE, STICKS AS MACROS, PREVIEW PARAM ON FIRST EDIT, and ANALOG FILTER are saved globally, across every project and boot. KEEP BPM ON LOAD is the exception: session only, always off at boot and never written to disk, so you flip it on by hand each time you want it for a live set.
 
